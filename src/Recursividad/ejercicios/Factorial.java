@@ -5,22 +5,22 @@ import Recursividad.Variables;
 public class Factorial extends Variables {
     public Factorial(int numero) {
         super(numero);
-        this.setCiclo(1);
-        this.setSuma(1);
-        this.setAux(0);
+        setCiclo(1);
+        setSuma(1);
+        setAux(0);
     }
 
     public int factorial() {
-        if (this.getCiclo() <= this.getNumero()) {
-            this.setAux(this.getCiclo() * this.getSuma());
-            this.setCiclo(this.getCiclo() + 1);
-            this.setSuma(this.getAux());
+        if (getCiclo() <= getNumero()) {
+            setAux(getCiclo() * getSuma());
+            setCiclo(getCiclo() + 1);
+            setSuma(getAux());
             factorial();
         }
-        return this.getAux();
+        return getAux();
     }
 
     public void mostrarFactorial() {
-        System.out.println("Factorial: " + this.getSuma());
+        System.out.println("Factorial: " + getSuma());
     }
 }

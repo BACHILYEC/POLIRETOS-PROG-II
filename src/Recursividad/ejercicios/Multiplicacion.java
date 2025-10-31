@@ -4,20 +4,31 @@ import Recursividad.Variables;
 
 public class Multiplicacion extends Variables {
 
-    public Multiplicacion(int numero, int numero2){
+    public Multiplicacion(int numero, int numero2) {
         super(numero, numero2);
-        this.setCiclo(1);
-        this.setSuma(0);
+        setCiclo(1);
+        setSuma(0);
     }
-    public int multiplicacion(){
-        if(this.getCiclo() <= this.getNumero2()){
-            this.setSuma(this.getSuma() + this.getNumero());
-            this.setCiclo(this.getCiclo() +1);
+
+    public int multiplicacion() {
+        if (getCiclo() <= Math.abs(getNumero2())) {
+            setSuma(getSuma() + Math.abs(getNumero()));
+            setCiclo(getCiclo() + 1);
             multiplicacion();
         }
-        return this.getSuma();
+        else{
+        if (getNumero() == 0 || getNumero2() == 0) {
+            setSuma(0);
+        } else if (getNumero() < 0 && getNumero2() < 0) {
+            setSuma(getSuma()); 
+        } else if (getNumero() < 0 || getNumero2() < 0) {
+            setSuma(-getSuma()); 
+        }
     }
-    public void mostrarMultiplicacion(){
-        System.out.println("Multiplicacion: " + this.getSuma());
+        return getSuma();
+    }
+
+    public void mostrarMultiplicacion() {
+        System.out.println("Multiplicacion: " + getSuma());
     }
 }
