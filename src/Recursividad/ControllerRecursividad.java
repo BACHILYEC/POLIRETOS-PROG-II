@@ -7,17 +7,17 @@ import Recursividad.ejercicios.Multiplicacion;
 import Recursividad.ejercicios.Potencia;
 import Recursividad.ejercicios.Suma;
 
-public class Controller extends Variables {
+public class ControllerRecursividad extends Variables {
 
-public Controller() {
+public ControllerRecursividad() {
     super();
 }
-    public Controller(int numero, int ciclo) {
+    public ControllerRecursividad(int numero, int ciclo) {
         super(numero, ciclo);
     }
 
 
-    public Controller(int numero) {
+    public ControllerRecursividad(int numero) {
         super(numero);
     }
     public void Ejercicio(){

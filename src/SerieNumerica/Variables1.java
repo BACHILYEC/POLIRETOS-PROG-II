@@ -1,6 +1,6 @@
 package SerieNumerica;
 
-public abstract class Variables {
+public abstract class Variables1 {
 
 private  int numero;
 
@@ -13,14 +13,14 @@ private int suma;
 private int aux;
 
 private int aux2;
-public Variables() {
+public Variables1() {
 
 }
 
-public Variables(int numero) {
+public Variables1(int numero) {
     setNumero(numero);
 }
-public Variables(int numero, int numero2) {
+public Variables1(int numero, int numero2) {
     setNumero(numero);
     setNumero2(numero2);
 }

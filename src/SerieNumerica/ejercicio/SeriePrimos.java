@@ -1,12 +1,15 @@
 package SerieNumerica.ejercicio;
 
-import SerieNumerica.Variables;
+import SerieNumerica.Variables1;
 
-public class SeriePrimos extends Variables {
-    public SeriePrimos(int numero) {
-        super(numero);
+public class SeriePrimos extends Variables1 {
+    public void reset(){
         setCiclo(2);
         setAux(0);
+    }
+    public SeriePrimos(int numero) {
+        super(numero);
+        reset();
     }
 
     public String Primos() {
@@ -26,10 +29,6 @@ public class SeriePrimos extends Variables {
             setCiclo(getCiclo() + 1);
         }
         return resultado;
-    }
-
-    public void imprimirPrimos() {
-        System.out.println("Serie Primos (For):\n"+Primos());
     }
 
     public String PrimosWhile() {
@@ -72,11 +71,22 @@ public class SeriePrimos extends Variables {
         return resultado;
     }
 
+    // Métodos de impresión agrupados al final
+    public void imprimirPrimos() {
+        System.out.println("Serie Primos (For):");
+        reset();
+        System.out.println(Primos());
+    }
+
     public void imprimirPrimosWhile() {
-        System.out.println("Serie Primos (While):\n"+PrimosWhile());
+        System.out.println("Serie Primos (While):");
+        reset();
+        System.out.println(PrimosWhile());
     }
 
     public void imprimirPrimosDoWhile() {
-        System.out.println("Serie Primos (Do-While):\n"+PrimosDoWhile());
+        System.out.println("Serie Primos (Do-While):");
+        reset();
+        System.out.println(PrimosDoWhile());
     }
 }
