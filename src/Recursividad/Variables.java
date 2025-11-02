@@ -13,6 +13,11 @@ private int suma;
 private int aux;
 
 private int aux2;
+
+private Integer largo;
+
+private Integer ancho;
+
 public Variables() {
 
 }
@@ -24,6 +29,7 @@ public Variables(int numero, int numero2) {
     setNumero(numero);
     setNumero2(numero2);
 }
+
 public int getNumero2() {
     return numero2;
 }
@@ -62,4 +68,21 @@ public int getCiclo() {
 public void setCiclo(int ciclo) {
     this.ciclo = ciclo;
 }
+
+public Integer getLargo() {
+    return largo;
+}
+
+public void setLargo(Integer largo) {
+    this.largo = largo;
+}
+
+public Integer getAncho() {
+    return ancho;
+}
+
+public void setAncho(Integer ancho) {
+    this.ancho = ancho;
+}
+
 }
