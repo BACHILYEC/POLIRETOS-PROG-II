@@ -5,9 +5,10 @@ public class Variablesandy {
     public String nombreCompleto;
     public String[] palabras;
     public int[] porcentaje;
-       public int tamaño;
+    public int tamanio;
     public char caracter;
-    public int tamano;
+    public String nombre;
+    public int puntos;
 
     public void pedirDatos() {
         Scanner sc = new Scanner(System.in);
@@ -25,11 +26,25 @@ public class Variablesandy {
         }
     
         System.out.print("Ingrese el tamaño del patrón (ej: 5): ");
-        tamaño = sc.nextInt();
+        tamanio = sc.nextInt();
         sc.nextLine(); // limpiar buffer
 
         System.out.print("Ingrese el carácter para dibujar: ");
         caracter = sc.next().charAt(0);
+    }
+
+     Scanner sc = new Scanner(System.in);
+
+    public void pedirDatosGrafica() {
+        System.out.print("Ingrese su nombre completo: ");
+        nombreCompleto = sc.nextLine().trim();
+
+        // Tomar solo el primer nombre
+        nombre = nombreCompleto.split("\\s+")[0];
+        puntos = nombre.length(); // cantidad de puntos = cantidad de letras
+
+        System.out.println("\nEl primer nombre es: " + nombre);
+        System.out.println("Número de puntos a graficar (letras del nombre): " + puntos);
     }
 
     public String[] obtenerIniciales() {

@@ -8,7 +8,7 @@ public class CargaNombre {
         Variablesandy datos = new Variablesandy();
         datos.pedirDatos();
 
-                System.out.printf("-FOR");
+                System.out.printf("-FOR\n");
 
         for (int i = 0; i < datos.palabras.length; i++) {
             int longitudBarra = (int) Math.round((datos.porcentaje[i] / 100.0) * 12);
@@ -28,7 +28,7 @@ public class CargaNombre {
 //Codigo utilizando while
 
         int i = 0;
-                System.out.printf("-WHILE");
+                System.out.printf("-WHILE\n");
 
         while (i < datos.palabras.length) {
             int longitudBarra = (int) Math.round((datos.porcentaje[i] / 100.0) * 12);
@@ -48,7 +48,7 @@ public class CargaNombre {
 
         //Codigo utilizando do...while
         i=0;
-        System.out.printf("-DO WHILE");
+        System.out.printf("-DO WHILE\n");
         do {
             int longitudBarra = (int) Math.round((datos.porcentaje[i] / 100.0) * 12);
             int longitudNombre = (int) Math.round((datos.porcentaje[i] / 100.0) * datos.palabras[i].length());

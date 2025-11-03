@@ -24,11 +24,11 @@ public class MatrizIniciales {
     // MÉTODO CON FOR
     // ======================================
     public static void dibujarConFor(Variablesandy d, String iniciales) {
-        for (int i = 0; i < d.tamaño; i++) {
+        for (int i = 0; i < d.tamanio; i++) {
             for (int k = 0; k < iniciales.length(); k++) {
                 char letra = iniciales.charAt(k);
-                for (int j = 0; j < d.tamaño; j++) {
-                    if (dibujarLetra(letra, i, j, d.tamaño))
+                for (int j = 0; j < d.tamanio; j++) {
+                    if (dibujarLetra(letra, i, j, d.tamanio))
                         System.out.print(d.caracter + " ");
                     else
                         System.out.print("  ");
@@ -44,13 +44,13 @@ public class MatrizIniciales {
     // ======================================
     public static void dibujarConWhile(Variablesandy d, String iniciales) {
         int i = 0;
-        while (i < d.tamaño) {
+        while (i < d.tamanio) {
             int k = 0;
             while (k < iniciales.length()) {
                 char letra = iniciales.charAt(k);
                 int j = 0;
-                while (j < d.tamaño) {
-                    if (dibujarLetra(letra, i, j, d.tamaño))
+                while (j < d.tamanio) {
+                    if (dibujarLetra(letra, i, j, d.tamanio))
                         System.out.print(d.caracter + " ");
                     else
                         System.out.print("  ");
@@ -75,18 +75,18 @@ public class MatrizIniciales {
                 char letra = iniciales.charAt(k);
                 int j = 0;
                 do {
-                    if (dibujarLetra(letra, i, j, d.tamaño))
+                    if (dibujarLetra(letra, i, j, d.tamanio))
                         System.out.print(d.caracter + " ");
                     else
                         System.out.print("  ");
                     j++;
-                } while (j < d.tamaño);
+                } while (j < d.tamanio);
                 System.out.print("   ");
                 k++;
             } while (k < iniciales.length());
             System.out.println();
             i++;
-        } while (i < d.tamaño);
+        } while (i < d.tamanio);
     }
 
     // ======================================
