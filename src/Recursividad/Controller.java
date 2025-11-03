@@ -49,7 +49,7 @@ public Controller() {
         System.out.println("***************");
         System.out.println("--- Figuras ---");
         System.out.println("***************");
-        Figura figura = new Figura(5,5);
+        Figura figura = new Figura(5,9);
         System.out.println("Figura 1: ");
         figura.figura1();
         System.out.println("Figura 2: ");
@@ -58,6 +58,13 @@ public Controller() {
         figura.figura3();
         System.out.println("Figura 4: ");
         figura.figura4();
-
+        System.out.println("Figura 5: ");
+        figura.figura5();
+        System.out.println("Figura 6: ");
+        figura.figura6();
+        System.out.println("Figura 7: ");
+        figura.figura7();
+        System.out.println("Figura 8: ");
+        figura.figura8();
     }
 }
