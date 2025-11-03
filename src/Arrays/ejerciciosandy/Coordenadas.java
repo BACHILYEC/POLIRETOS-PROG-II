@@ -6,8 +6,8 @@ public class Coordenadas {
 
     public static void main(String[] args) {
         Variablesandy datos = new Variablesandy();
-        datos.pedirDatosGrafica();
-
+        datos.pedirDatos();
+    
         System.out.println("-FOR\n");
         graficarFor(datos.nombre, datos.puntos);
 

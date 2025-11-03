@@ -10,6 +10,7 @@ public class Variablesandy {
     public String nombre;
     public int puntos;
 
+
     public void pedirDatos() {
         Scanner sc = new Scanner(System.in);
 
@@ -31,20 +32,9 @@ public class Variablesandy {
 
         System.out.print("Ingrese el carácter para dibujar: ");
         caracter = sc.next().charAt(0);
-    }
 
-     Scanner sc = new Scanner(System.in);
-
-    public void pedirDatosGrafica() {
-        System.out.print("Ingrese su nombre completo: ");
-        nombreCompleto = sc.nextLine().trim();
-
-        // Tomar solo el primer nombre
         nombre = nombreCompleto.split("\\s+")[0];
-        puntos = nombre.length(); // cantidad de puntos = cantidad de letras
-
-        System.out.println("\nEl primer nombre es: " + nombre);
-        System.out.println("Número de puntos a graficar (letras del nombre): " + puntos);
+        puntos = nombre.length();
     }
 
     public String[] obtenerIniciales() {
@@ -52,4 +42,6 @@ public class Variablesandy {
         if (partes.length < 2) return new String[]{"?", "?"};
         return new String[]{partes[0].substring(0, 1).toUpperCase(), partes[1].substring(0, 1).toUpperCase()};
     }
+
+
 }
