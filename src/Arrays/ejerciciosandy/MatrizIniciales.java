@@ -1,5 +1,5 @@
 package Arrays.ejerciciosandy;
 
-public class Variablesandy {
+public class MatrizIniciales {
 
 }
