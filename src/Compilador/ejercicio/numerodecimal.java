@@ -24,6 +24,7 @@ public class numerodecimal {
 
       else if (!(Character.isDigit(caracter))) {
         esnumero = false;
+        break;
 
       }
 
