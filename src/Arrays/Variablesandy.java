@@ -5,12 +5,15 @@ public class Variablesandy {
     public String nombreCompleto;
     public String[] palabras;
     public int[] porcentaje;
+       public int tamaño;
+    public char caracter;
+    public int tamano;
 
     public void pedirDatos() {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Ingrese su nombre completo: ");
-        nombreCompleto = sc.nextLine();
+        nombreCompleto = sc.nextLine().trim();
 
         palabras = nombreCompleto.split(" ");
         porcentaje = new int[palabras.length];
@@ -20,7 +23,18 @@ public class Variablesandy {
             System.out.print(palabras[i] + ": ");
             porcentaje[i] = sc.nextInt();
         }
+    
+        System.out.print("Ingrese el tamaño del patrón (ej: 5): ");
+        tamaño = sc.nextInt();
+        sc.nextLine(); // limpiar buffer
 
-        sc.close();
+        System.out.print("Ingrese el carácter para dibujar: ");
+        caracter = sc.next().charAt(0);
+    }
+
+    public String[] obtenerIniciales() {
+        String[] partes = nombreCompleto.split("\\s+");
+        if (partes.length < 2) return new String[]{"?", "?"};
+        return new String[]{partes[0].substring(0, 1).toUpperCase(), partes[1].substring(0, 1).toUpperCase()};
     }
 }
