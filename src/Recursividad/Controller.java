@@ -6,7 +6,7 @@ import Recursividad.ejercicios.Factorial;
 import Recursividad.ejercicios.Multiplicacion;
 import Recursividad.ejercicios.Potencia;
 import Recursividad.ejercicios.Suma;
-import Figuras.Figura;
+import pkCicloFigura.Figura;
 
 public class Controller extends Variables {
 
@@ -46,25 +46,45 @@ public Controller() {
 
     public void iniciarFigura(){
         System.out.println("");
-        System.out.println("***************");
-        System.out.println("--- Figuras ---");
-        System.out.println("***************");
+        System.out.println("--------FIGURAS--------");
         Figura figura = new Figura(5,9);
         System.out.println("Figura 1: ");
-        figura.figura1();
+        figura.g2_crearFigura1();
         System.out.println("Figura 2: ");
-        figura.figura2();
+        figura.g2_crearFigura2();
         System.out.println("Figura 3: ");
-        figura.figura3();
+        figura.g2_crearFigura3();
         System.out.println("Figura 4: ");
-        figura.figura4();
+        figura.g2_crearFigura4();
         System.out.println("Figura 5: ");
-        figura.figura5();
+        figura.g2_crearFigura5();
         System.out.println("Figura 6: ");
-        figura.figura6();
+        figura.g2_crearFigura6();
         System.out.println("Figura 7: ");
-        figura.figura7();
+        figura.g2_crearFigura7();
         System.out.println("Figura 8: ");
-        figura.figura8();
+        figura.g2_crearFigura8();
+        System.out.println("Figura 9: ");
+        figura.g2_crearFigura9();
+        System.out.println("Figura 10: ");
+        figura.g2_crearFigura10();
+        System.out.println("Figura 11: ");
+        figura.g2_crearFigura11();
+        System.out.println("Figura 12: ");
+        figura.g2_crearFigura12();
+        System.out.println("Figura 13: ");
+        figura.g2_crearFigura13();
+        System.out.println("Figura 14: ");
+        figura.g2_crearFigura14();
+        System.out.println("Figura 15: ");
+        figura.g2_crearFigura15();
+        System.out.println("Figura 16: ");
+        figura.g2_crearFigura16();
+        System.out.println("Figura 17: ");
+        figura.g2_crearFigura17();
+        System.out.println("Figura 18: ");
+        figura.g2_crearFigura18();
+        System.out.println("Figura 19: ");
+        figura.g2_crearFigura19();
     }
 }

@@ -14,9 +14,9 @@ private int aux;
 
 private int aux2;
 
-private Integer largo;
+private int largo;
 
-private Integer ancho;
+private int ancho;
 
 public Variables() {
 
