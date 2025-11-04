@@ -5,5 +5,6 @@ public class App {
         Controller controller = new Controller();
         controller.Ejercicio();
         controller.iniciarFigura();
+        controller.iniciarCarga();
     }
 }

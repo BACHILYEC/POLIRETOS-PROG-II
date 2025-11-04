@@ -18,6 +18,9 @@ private int largo;
 
 private int ancho;
 
+private int tiempo;
+
+
 public Variables() {
 
 }
@@ -83,6 +86,14 @@ public Integer getAncho() {
 
 public void setAncho(Integer ancho) {
     this.ancho = ancho;
+}
+
+public int getTiempo() {
+    return tiempo;
+}
+
+public void setTiempo(int tiempo) {
+    this.tiempo = tiempo;
 }
 
 }

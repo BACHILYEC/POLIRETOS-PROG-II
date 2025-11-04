@@ -6,6 +6,7 @@ import Recursividad.ejercicios.Factorial;
 import Recursividad.ejercicios.Multiplicacion;
 import Recursividad.ejercicios.Potencia;
 import Recursividad.ejercicios.Suma;
+import pkCargaSimulador.Carga;
 import pkCicloFigura.Figura;
 
 public class Controller extends Variables {
@@ -86,5 +87,21 @@ public Controller() {
         figura.g2_crearFigura18();
         System.out.println("Figura 19: ");
         figura.g2_crearFigura19();
+    }
+
+    public void iniciarCarga() throws InterruptedException{
+        System.out.println("");
+        System.out.println("--------CARGAS--------");
+        Carga carga = new Carga(500);
+        //System.out.println("Carga 1: ");
+        //carga.carga1();
+        //System.out.println("\nCarga 2: ");
+        //carga.carga2('#');
+        System.out.println("\nCarga 3: ");
+        carga.carga3('-');
+        System.out.println("\nCarga 4: ");
+        carga.carga4('-');
+
+
     }
 }
