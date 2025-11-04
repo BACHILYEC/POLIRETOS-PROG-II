@@ -2,66 +2,50 @@ package Arrays.ejerciciosandy;
 
 import Arrays.Variablesandy;
 
-//Codigo utilizando for
 public class CargaNombre {
-    public static void main(String[] args) {
+
+    public void ejecutar() {
         Variablesandy datos = new Variablesandy();
-        datos.pedirDatos();
+        datos.pedirDatos(); // Pide palabras y porcentajes
 
-                System.out.printf("-FOR\n");
-
+        //CODIGO CON FOR
+        System.out.println("-FOR\n");
         for (int i = 0; i < datos.palabras.length; i++) {
-            int longitudBarra = (int) Math.round((datos.porcentaje[i] / 100.0) * 12);
-            int longitudNombre = (int) Math.round((datos.porcentaje[i] / 100.0) * datos.palabras[i].length());
-
-            if (longitudBarra < 1 && datos.porcentaje[i] > 0) longitudBarra = 1;
-            if (longitudNombre < 1 && datos.porcentaje[i] > 0) longitudNombre = 1;
-
-            String barra = "=".repeat(longitudBarra);
-            String parte = datos.palabras[i].substring(0, longitudNombre);
-
-            System.out.printf("$$%-12s>$$ %3d%% %s%n", barra, datos.porcentaje[i], parte);
+            imprimirBarra(datos, i);
         }
-            System.out.printf("\n");
+        System.out.println();
 
-
-//Codigo utilizando while
-
+        //CODIGO CON WHILE
+        System.out.println("-WHILE\n");
         int i = 0;
-                System.out.printf("-WHILE\n");
-
         while (i < datos.palabras.length) {
-            int longitudBarra = (int) Math.round((datos.porcentaje[i] / 100.0) * 12);
-            int longitudNombre = (int) Math.round((datos.porcentaje[i] / 100.0) * datos.palabras[i].length());
-
-            if (longitudBarra < 1 && datos.porcentaje[i] > 0) longitudBarra = 1;
-            if (longitudNombre < 1 && datos.porcentaje[i] > 0) longitudNombre = 1;
-
-            String barra = "=".repeat(longitudBarra);
-            String parte = datos.palabras[i].substring(0, longitudNombre);
-
-            System.out.printf("$$%-12s>$$ %3d%% %s%n", barra, datos.porcentaje[i], parte);
-
+            imprimirBarra(datos, i);
             i++;
         }
-            System.out.printf("\n");
+        System.out.println();
 
-        //Codigo utilizando do...while
-        i=0;
-        System.out.printf("-DO WHILE\n");
+        //CODIGO CON DO...WHILE
+        System.out.println("-DO WHILE\n");
+        i = 0;
         do {
-            int longitudBarra = (int) Math.round((datos.porcentaje[i] / 100.0) * 12);
-            int longitudNombre = (int) Math.round((datos.porcentaje[i] / 100.0) * datos.palabras[i].length());
-
-            if (longitudBarra < 1 && datos.porcentaje[i] > 0) longitudBarra = 1;
-            if (longitudNombre < 1 && datos.porcentaje[i] > 0) longitudNombre = 1;
-
-            String barra = "=".repeat(longitudBarra);
-            String parte = datos.palabras[i].substring(0, longitudNombre);
-
-            System.out.printf("$$%-12s>$$ %3d%% %s%n", barra, datos.porcentaje[i], parte);
-
+            imprimirBarra(datos, i);
             i++;
         } while (i < datos.palabras.length);
+        System.out.println();
+    }
+
+    // 🔹 Método auxiliar reutilizable
+    private void imprimirBarra(Variablesandy datos, int i) {
+        int longitudBarra = (int) Math.round((datos.porcentaje[i] / 100.0) * 12);
+        int longitudNombre = (int) Math.round((datos.porcentaje[i] / 100.0) * datos.palabras[i].length());
+
+        if (longitudBarra < 1 && datos.porcentaje[i] > 0) longitudBarra = 1;
+        if (longitudNombre < 1 && datos.porcentaje[i] > 0) longitudNombre = 1;
+
+        String barra = "=".repeat(longitudBarra);
+        String parte = datos.palabras[i].substring(0, longitudNombre);
+
+        System.out.printf("$$%-12s>$$ %3d%% %s%n", barra, datos.porcentaje[i], parte);
     }
 }
+

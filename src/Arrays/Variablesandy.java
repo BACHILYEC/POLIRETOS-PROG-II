@@ -11,6 +11,26 @@ public class Variablesandy {
     public int puntos;
     public String apellido;
 
+    public void pedirDatitos(){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Ingrese su nombre completo: ");
+        nombreCompleto = sc.nextLine().trim();
+
+        palabras = nombreCompleto.split(" ");
+        porcentaje = new int[palabras.length];
+        System.out.print("Ingrese el tamaño del patrón (ej: 5): ");
+        tamanio = sc.nextInt();
+        sc.nextLine();
+
+        System.out.print("Ingrese el carácter para dibujar: ");
+        caracter = sc.next().charAt(0);
+
+        nombre = nombreCompleto.split("\\s+")[0];
+        puntos = nombre.length();
+
+        dividirNombreCompleto();
+    }
 
     public void pedirDatos() {
         Scanner sc = new Scanner(System.in);
@@ -26,18 +46,16 @@ public class Variablesandy {
             System.out.print(palabras[i] + ": ");
             porcentaje[i] = sc.nextInt();
         }
-    
-        System.out.print("Ingrese el tamaño del patrón (ej: 5): ");
-        tamanio = sc.nextInt();
-        sc.nextLine(); // limpiar buffer
+    }
 
-        System.out.print("Ingrese el carácter para dibujar: ");
-        caracter = sc.next().charAt(0);
+    public void pedirDatosGrafica() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Ingrese su nombre: ");
+        nombreCompleto = sc.nextLine().trim();
 
         nombre = nombreCompleto.split("\\s+")[0];
         puntos = nombre.length();
-
-        dividirNombreCompleto();
     }
 
     public String[] obtenerIniciales() {

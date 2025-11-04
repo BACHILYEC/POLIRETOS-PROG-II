@@ -4,10 +4,10 @@ import Arrays.Variablesandy;
 
 public class Coordenadas {
 
-    public static void main(String[] args) {
+    public void ejecutar() {
         Variablesandy datos = new Variablesandy();
-        datos.pedirDatos();
-    
+        datos.pedirDatosGrafica();
+
         System.out.println("-FOR\n");
         graficarFor(datos.nombre, datos.puntos);
 
@@ -18,7 +18,7 @@ public class Coordenadas {
         graficarDoWhile(datos.nombre, datos.puntos);
     }
 
-    // CÓDIGO CON FOR
+    //CÓDIGO CON FOR
     public static void graficarFor(String nombre, int puntos) {
         int maxY = 2 * puntos;
 
@@ -41,7 +41,7 @@ public class Coordenadas {
         System.out.println("→ x");
     }
 
-    // CÓDIGO CON WHILE
+    //CÓDIGO CON WHILE
     public static void graficarWhile(String nombre, int puntos) {
         int maxY = 2 * puntos;
         int y = maxY;
@@ -70,7 +70,7 @@ public class Coordenadas {
         System.out.println("→ x");
     }
 
-    // CÓDIGO CON DO...WHILE
+    //CÓDIGO CON DO...WHILE
     public static void graficarDoWhile(String nombre, int puntos) {
         int maxY = 2 * puntos;
         int y = maxY;
@@ -101,4 +101,3 @@ public class Coordenadas {
         System.out.println("→ x");
     }
 }
-
