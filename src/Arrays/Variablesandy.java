@@ -9,6 +9,7 @@ public class Variablesandy {
     public char caracter;
     public String nombre;
     public int puntos;
+    public String apellido;
 
 
     public void pedirDatos() {
@@ -35,6 +36,8 @@ public class Variablesandy {
 
         nombre = nombreCompleto.split("\\s+")[0];
         puntos = nombre.length();
+
+        dividirNombreCompleto();
     }
 
     public String[] obtenerIniciales() {
@@ -43,5 +46,17 @@ public class Variablesandy {
         return new String[]{partes[0].substring(0, 1).toUpperCase(), partes[1].substring(0, 1).toUpperCase()};
     }
 
+    public void dividirNombreCompleto() {
+        String[] partes = nombreCompleto.split("\\s+");
+
+        if (partes.length >= 2) {
+            nombre = partes[0];
+            apellido = partes[1];
+        } else {
+            // Si solo se da un nombre, el apellido será vacío
+            nombre = partes[0];
+            apellido = "";
+        }
+    }
 
 }
