@@ -13,6 +13,7 @@ private int suma;
 private int aux;
 
 private int aux2;
+
 public Variables() {
 
 }
