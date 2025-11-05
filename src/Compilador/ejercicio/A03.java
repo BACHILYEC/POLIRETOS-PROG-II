@@ -1,6 +1,8 @@
-package SerieCaracteres.ciclos;
+package Compilador.ejercicio;
 
-public class Auton {
+import SerieCaracteres.ciclos.Tool;
+
+public class A03 {
     static final int IH_ER  = -1;
     static final int IH_OK  = 1;
     static final int IH_INC = 0;

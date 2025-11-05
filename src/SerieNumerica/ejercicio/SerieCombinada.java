@@ -1,8 +1,8 @@
 package SerieNumerica.ejercicio;
 
-import SerieNumerica.Variables1;
+import Recursividad.Variables;
 
-public class SerieCombinada extends Variables1 {
+public class SerieCombinada extends Variables {
     public void reset(){
         setCiclo(0);
         setAux(1);

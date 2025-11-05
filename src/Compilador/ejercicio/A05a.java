@@ -2,11 +2,11 @@ package Compilador.ejercicio;
 
 import java.util.Scanner;
 
-public class numerodecimal {
+public class A05a {
   private String numeroDecimal;
 
-  public numerodecimal(String numeroDecimal) {
-    this.numeroDecimal = numeroDecimal;
+  public A05a() {
+    
   }
 
   Scanner sc = new Scanner(System.in);

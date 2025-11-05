@@ -13,6 +13,7 @@ public class Carga extends Variables{
     public static final String verde = "\u001B[32m";
     public static final String amarillo = "\u001B[33m";
     public static final String azul = "\u001B[34m";
+    public static final String blanco = "\u001B[97m";
 
     public Carga(){
         super();
@@ -246,7 +247,6 @@ public class Carga extends Variables{
         int niveles = 50; // cantidad de señales
         int anchoTotal = 25; // ancho para centrar visualmente
 
-        System.out.println("Generando señales simétricas:\n");
 
         for (int nivel = 1; nivel <= niveles; nivel++) {
             int longitud = random.nextInt(0, 11);
@@ -269,8 +269,10 @@ public class Carga extends Variables{
                 padding += " ";
             }
             System.out.println(padding + figura);
+            System.out.println(blanco);
         }
         System.out.println();
+
     }
 
     public void g2_cargar12() throws InterruptedException{
