@@ -14,6 +14,13 @@ private int aux;
 
 private int aux2;
 
+private int largo;
+
+private int ancho;
+
+private int tiempo;
+
+
 public Variables() {
 
 }
@@ -63,4 +70,30 @@ public int getCiclo() {
 public void setCiclo(int ciclo) {
     this.ciclo = ciclo;
 }
+
+
+public int getLargo() {
+    return largo;
+}
+
+public void setLargo(int largo) {
+    this.largo = largo;
+}
+
+public int getAncho() {
+    return ancho;
+}
+
+public void setAncho(int ancho) {
+    this.ancho = ancho;
+}
+
+public int getTiempo() {
+    return tiempo;
+}
+
+public void setTiempo(int tiempo) {
+    this.tiempo = tiempo;
+}
+
 }
