@@ -17,6 +17,8 @@ import CadenaCaracteres.Ejercicios.InvertirLetraMayus;
 import CadenaCaracteres.Ejercicios.InvertirVocalMayus;
 import CadenaCaracteres.Ejercicios.MayusSinJ;
 import Compilador.ejercicio.A04;
+import Compilador.ejercicio.A01;
+import Compilador.ejercicio.A02;
 import Compilador.ejercicio.A03;
 import Compilador.ejercicio.A05a;
 import Compilador.ejercicio.A07;
@@ -221,7 +223,7 @@ public class Controlador extends Variables {
         System.out.println("Figuras:");
         System.out.println("");
         System.out.println("--------FIGURAS--------");
-        Figura figura = new Figura(numero1, 5);
+        Figura figura = new Figura(5, 9);
         System.out.println("Figura 1: ");
         figura.g2_crearFigura1();
         System.out.println("Figura 2: ");
@@ -414,11 +416,13 @@ public class Controlador extends Variables {
         
         System.out.println("Automata para validar: a*b+c");
         System.out.println();
+        A01 automata01 = new A01();
+        automata01.ejecutarValidacion();
 
-
-        System.out.println("Automata para validar: ab+cs");
+        System.out.println("Automata para validar: ab+ca");
         System.out.println();
-
+        A02 automata2 = new A02();
+        automata2.ejecutarValidacion();
         
         System.out.println("Automata para validar: a+/b+/c+");
         System.out.println();
