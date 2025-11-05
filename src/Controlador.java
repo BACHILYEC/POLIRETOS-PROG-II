@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-package Recursividad;
-
-import java.util.Scanner;
-
-=======
 
 import java.util.Scanner;
 
@@ -26,54 +20,12 @@ import Compilador.ejercicio.A04;
 import Compilador.ejercicio.A03;
 import Compilador.ejercicio.A05a;
 import Compilador.ejercicio.A07;
->>>>>>> mathias-rama2
 import Recursividad.ejercicios.ConteoProg;
 import Recursividad.ejercicios.ConteoReg;
 import Recursividad.ejercicios.Factorial;
 import Recursividad.ejercicios.Multiplicacion;
 import Recursividad.ejercicios.Potencia;
 import Recursividad.ejercicios.Suma;
-<<<<<<< HEAD
-
-public class ControllerRecursividad extends Variables {
-
-public ControllerRecursividad() {
-    super();
-}
-    public ControllerRecursividad(int numero, int ciclo) {
-        super(numero, ciclo);
-    }
-
-
-    public ControllerRecursividad(int numero) {
-        super(numero);
-    }
-    Scanner sc = new Scanner(System.in);
-    public void Ejercicio(){
-        System.out.println("Ingrese el primer numero:");
-        int numero1 = sc.nextInt();
-        System.out.println("Ingrese el segundo numero");
-        int numero2 = sc.nextInt();
-Factorial factorial = new Factorial(numero1);
-factorial.factorial();
-factorial.mostrarFactorial();
-Suma suma = new Suma(numero1,numero2);
-suma.suma();
-suma.mostrarSuma();
-Multiplicacion multiplicacion = new Multiplicacion(numero1,numero2);
-multiplicacion.multiplicacion();
-multiplicacion.mostrarMultiplicacion();
-Potencia potencia = new Potencia(numero1,numero2);
-potencia.potencia();
-potencia.mostrarPotencia();
-ConteoProg conteoProg = new ConteoProg(numero1);
-System.out.print("Conteo Progresivo: ");
-conteoProg.conteoProg();
-ConteoReg conteoReg = new ConteoReg(numero1);
-System.out.print("Conteo Regresivo: ");
-conteoReg.conteoReg();
-}
-=======
 import SerieCaracteres.ciclos.S1;
 import SerieCaracteres.ciclos.S10;
 import SerieCaracteres.ciclos.S2;
@@ -462,12 +414,8 @@ public class Controlador extends Variables {
         
         System.out.println("Automata para validar: a*b+c");
         System.out.println();
-
-
         System.out.println("Automata para validar: ab+cs");
         System.out.println();
-
-        
         System.out.println("Automata para validar: a+/b+/c+");
         System.out.println();
         A03 automata = new A03();
@@ -482,5 +430,4 @@ public class Controlador extends Variables {
         validador.ejecutar(sc);
 
     }
->>>>>>> mathias-rama2
 }

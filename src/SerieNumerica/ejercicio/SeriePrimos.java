@@ -1,14 +1,8 @@
 package SerieNumerica.ejercicio;
 
-<<<<<<< HEAD
-import SerieNumerica.Variables1;
-
-public class SeriePrimos extends Variables1 {
-=======
 import Recursividad.Variables;
 
 public class SeriePrimos extends Variables {
->>>>>>> mathias-rama2
     public void reset(){
         setCiclo(2);
         setAux(0);
