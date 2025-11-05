@@ -4,8 +4,8 @@ import GrafosYAutomatas.ControllerGrafo;
 
 public class App {
 
-    public void iniciar() throws Exception {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws Exception {
+         Scanner sc = new Scanner(System.in);
 
     
         ControllerCadena controllerCadenas = new ControllerCadena();
@@ -15,11 +15,7 @@ public class App {
         ControllerGrafo controllerGrafos = new ControllerGrafo();
         controllerGrafos.ejecutar(sc);
 
-        sc.close(); 
-    }
-
-    public static void main(String[] args) throws Exception {
-        new App().iniciar();
+        sc.close();
     }
 }
 
