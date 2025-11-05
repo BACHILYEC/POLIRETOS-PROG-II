@@ -1,7 +1,8 @@
-package Recursividad;
+
 
 import java.util.Scanner;
 
+import Recursividad.Variables;
 import Recursividad.ejercicios.ConteoProg;
 import Recursividad.ejercicios.ConteoReg;
 import Recursividad.ejercicios.Factorial;
@@ -9,17 +10,19 @@ import Recursividad.ejercicios.Multiplicacion;
 import Recursividad.ejercicios.Potencia;
 import Recursividad.ejercicios.Suma;
 
-public class ControllerRecursividad extends Variables {
 
-public ControllerRecursividad() {
+
+public class Controlador extends Variables {
+
+public Controlador() {
     super();
 }
-    public ControllerRecursividad(int numero, int ciclo) {
+    public Controlador(int numero, int ciclo) {
         super(numero, ciclo);
     }
 
 
-    public ControllerRecursividad(int numero) {
+    public Controlador(int numero) {
         super(numero);
     }
     Scanner sc = new Scanner(System.in);
