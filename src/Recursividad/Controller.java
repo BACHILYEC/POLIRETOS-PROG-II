@@ -96,27 +96,27 @@ public class Controller extends Variables {
         System.out.println("--------CARGAS--------");
         Carga carga = new Carga(500);
         System.out.println("Carga 1: ");
-        carga.cargar1();
+        carga.g2_cargar1();
         System.out.println("\nCarga 2: ");
-        carga.cargar2('#');
+        carga.g2_cargar2('#');
         System.out.println("\nCarga 3: ");
-        carga.cargar3('-');
+        carga.g2_cargar3('-');
         System.out.println("\nCarga 4: ");
-        carga.cargar4();
+        carga.g2_cargar4();
         System.out.println("\nCarga 5: ");
-        carga.cargar5();
+        carga.g2_cargar5();
         System.out.println("\nCarga 6: ");
-        carga.cargar6();
+        carga.g2_cargar6();
         System.out.println("\nCarga 8: ");
-        carga.cargar8();
+        carga.g2_cargar8();
         System.out.println("\nCarga 7: ");
-        carga.cargar7();
+        carga.g2_cargar7();
         System.out.println("\nCarga 10: ");
-        carga.cargar10();
+        carga.g2_cargar10();
         System.out.println("\nCarga 11: ");
-        carga.cargar11();
+        carga.g2_cargar11();
         System.out.println("\nCarga 12: ");
-        carga.cargar12();
+        carga.g2_cargar12();
 
         Variablesandy datos = new Variablesandy();
 
