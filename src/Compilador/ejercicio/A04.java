@@ -1,6 +1,8 @@
-package SerieCaracteres.ciclos;
+package Compilador.ejercicio;
 
-public class Automata02 {
+import SerieCaracteres.ciclos.Tool;
+
+public class A04 {
 
     static final int IH_ER  = -1;
 

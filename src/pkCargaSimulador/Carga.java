@@ -13,6 +13,7 @@ public class Carga extends Variables{
     public static final String verde = "\u001B[32m";
     public static final String amarillo = "\u001B[33m";
     public static final String azul = "\u001B[34m";
+    public static final String blanco = "\u001B[97m";
 
     public Carga(){
         super();
@@ -23,7 +24,7 @@ public class Carga extends Variables{
         this.setTiempo(tiempo);
     }
 
-    public void cargar1() throws InterruptedException {
+    public void g2_cargar1() throws InterruptedException {
         String v[][] = new String[1][5];
         int acum = 0;
         for(int i=0; i<1; i++){
@@ -50,7 +51,7 @@ public class Carga extends Variables{
         
     }
 
-    public void cargar2(char caracter) throws InterruptedException {
+    public void g2_cargar2(char caracter) throws InterruptedException {
     
         for(int i=0; i<=20; i++){
             int porcentaje = (i*4)+20;
@@ -70,7 +71,7 @@ public class Carga extends Variables{
         
     }
 
-    public void cargar3(char caracter) throws InterruptedException {
+    public void g2_cargar3(char caracter) throws InterruptedException {
     
         for(int i=0; i<=20; i++){
             int porcentaje = (i*4)+20;
@@ -101,7 +102,7 @@ public class Carga extends Variables{
         
     }
 
-    public void cargar4() throws InterruptedException {
+    public void g2_cargar4() throws InterruptedException {
     
         for (int i = 0; i <= 100; i += 10) {
             String animacion = (i / 10) % 2 == 0 ? "o0o" : "0o0";
@@ -112,7 +113,7 @@ public class Carga extends Variables{
         System.out.println();
     }
 
-    public void cargar5() throws InterruptedException {
+    public void g2_cargar5() throws InterruptedException {
     
         for (int i = 0; i <= 100; i += 5) {
             int progreso = i * 20/ 100;
@@ -139,7 +140,7 @@ public class Carga extends Variables{
         }
     }
 
-    public void cargar6() throws InterruptedException {
+    public void g2_cargar6() throws InterruptedException {
         for(int i = 0; i <= 20; i++) {
             int porcentaje = (i * 4) + 20;
             System.out.print("\r[");
@@ -166,7 +167,7 @@ public class Carga extends Variables{
         System.out.println();
     }
 
-    public void cargar7() throws InterruptedException {
+    public void g2_cargar7() throws InterruptedException {
         for (int i = 0; i <= 20; i++) {
         int porcentaje = i * 5;
         System.out.print("\r[");
@@ -187,7 +188,7 @@ public class Carga extends Variables{
         System.out.println();
     }
 
-    public void cargar8() throws InterruptedException {
+    public void g2_cargar8() throws InterruptedException {
         System.out.print("Ingresar nombre y apellido: ");
         Scanner sc = new Scanner(System.in);
         String nombre = sc.nextLine();
@@ -208,7 +209,7 @@ public class Carga extends Variables{
         }
     }
 
-    public void cargar9() throws InterruptedException {
+    public void g2_cargar9() throws InterruptedException {
         Scanner sc = new Scanner(System.in);
         System.out.print("Ingresar nombre completo: ");
         String nombre = sc.nextLine();
@@ -221,7 +222,7 @@ public class Carga extends Variables{
         System.out.println("");
     }
 
-    public void cargar10() throws InterruptedException {
+    public void g2_cargar10() throws InterruptedException {
         int archivoRandom = random.nextInt(10,101);
 
         System.out.println("cargando archivo de " + archivoRandom + " kB: ");
@@ -242,11 +243,10 @@ public class Carga extends Variables{
         System.out.println("");
     }
 
-    public void cargar11() throws InterruptedException {
+    public void g2_cargar11() throws InterruptedException {
         int niveles = 50; // cantidad de señales
         int anchoTotal = 25; // ancho para centrar visualmente
 
-        System.out.println("Generando señales simétricas:\n");
 
         for (int nivel = 1; nivel <= niveles; nivel++) {
             int longitud = random.nextInt(0, 11);
@@ -269,11 +269,13 @@ public class Carga extends Variables{
                 padding += " ";
             }
             System.out.println(padding + figura);
+            System.out.println(blanco);
         }
         System.out.println();
+
     }
 
-    public void cargar12() throws InterruptedException{
+    public void g2_cargar12() throws InterruptedException{
        for(int i = 0; i <= 20; i++) {
         int porcentaje = (i * 4) + 20;
         System.out.print("\r");

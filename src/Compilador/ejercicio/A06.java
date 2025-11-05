@@ -1,4 +1,4 @@
-package Compiladores;
+package Compilador.ejercicio;
 
 import java.util.Scanner;
 

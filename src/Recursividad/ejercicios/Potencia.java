@@ -11,7 +11,11 @@ public class Potencia extends Variables {
         setSuma(1);
     }
 
+<<<<<<< HEAD
     public int potencia(){
+=======
+    public long potencia(){
+>>>>>>> mathias-rama2
         if(getCiclo() <= Math.abs(getNumero2())){
           setSuma(getSuma() * getNumero());
             setCiclo(getCiclo() +1);

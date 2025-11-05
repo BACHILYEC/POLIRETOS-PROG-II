@@ -1,5 +1,27 @@
+<<<<<<< HEAD
 # Ignore compiled class files and build output
 bin/
 
 # IDE files
 .vscode/
+=======
+# Compiled class files
+*.class
+
+# Package Files
+*.jar
+*.war
+*.ear
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# Build directory
+bin/
+target/
+
+# Logs
+*.log
+>>>>>>> mathias-rama2

@@ -23,7 +23,7 @@ public class Variablesandy {
         tamanio = sc.nextInt();
         sc.nextLine();
 
-        System.out.print("Ingrese el carácter para dibujar: ");
+        System.out.print("Ingrese el simbolo para dibujar: ");
         caracter = sc.next().charAt(0);
 
         nombre = nombreCompleto.split("\\s+")[0];
