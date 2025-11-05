@@ -21,12 +21,12 @@ public class ContarLetra extends VariableCadena{
     }
 
     public String usandoDoWhile(String texto) {
-        if (texto.isEmpty()) return "La frase tiene 0 letras.";
+        if (texto.isEmpty()) return "La frase tiene 0 letras";
         int contador = 0, i = 0;
         do {
             if (Character.isLetter(texto.charAt(i))) contador++;
             i++;
         } while (i < texto.length());
-        return "La frase tiene " + contador + " letras.";
+        return "La frase tiene " + contador + " letras";
     }
 }
