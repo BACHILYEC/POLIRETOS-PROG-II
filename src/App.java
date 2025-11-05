@@ -1,9 +1,9 @@
-import SerieCaracteres.Controlador;
+import Recursividad.Controller;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Controlador controller = new Controlador();
-        controller.ejecutarEjercicio();
+        Controller controlador = new Controller();
+        controlador.Ejercicio();
     }
 }
 

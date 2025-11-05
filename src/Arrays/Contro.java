@@ -2,7 +2,7 @@ package Arrays;
 
 import Arrays.ejerciciosandy.*;
 
-public class Controller {
+public class Contro {
 
     public static void main(String[] args) {
         Variablesandy datos = new Variablesandy();
