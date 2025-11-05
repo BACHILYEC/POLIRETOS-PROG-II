@@ -4,7 +4,7 @@ import Recursividad.Variables;
 
 public class ConteoReg extends Variables {
     public ConteoReg(int numero){
-        super(numero);
+        super(Math.abs(numero));
         this.setCiclo(0);
     }
     public void conteoReg(){

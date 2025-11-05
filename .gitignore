@@ -1,0 +1,5 @@
+# Ignore compiled class files and build output
+bin/
+
+# IDE files
+.vscode/

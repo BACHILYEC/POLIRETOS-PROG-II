@@ -11,7 +11,7 @@ public class Factorial extends Variables {
     }
 
     public int factorial() {
-        if (getCiclo() <= getNumero()) {
+        if (getCiclo() <= Math.abs(getNumero())) {
             setAux(getCiclo() * getSuma());
             setCiclo(getCiclo() + 1);
             setSuma(getAux());

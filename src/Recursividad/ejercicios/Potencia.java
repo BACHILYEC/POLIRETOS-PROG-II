@@ -12,7 +12,7 @@ public class Potencia extends Variables {
     }
 
     public int potencia(){
-        if(getCiclo() <= getNumero2()){
+        if(getCiclo() <= Math.abs(getNumero2())){
           setSuma(getSuma() * getNumero());
             setCiclo(getCiclo() +1);
             potencia();
