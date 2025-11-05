@@ -17,6 +17,8 @@ import CadenaCaracteres.Ejercicios.InvertirLetraMayus;
 import CadenaCaracteres.Ejercicios.InvertirVocalMayus;
 import CadenaCaracteres.Ejercicios.MayusSinJ;
 import Compilador.ejercicio.A04;
+import Compilador.ejercicio.A01;
+import Compilador.ejercicio.A02;
 import Compilador.ejercicio.A03;
 import Compilador.ejercicio.A05a;
 import Compilador.ejercicio.A07;
@@ -413,13 +415,20 @@ public class Controlador extends Variables {
         System.out.println("Grafos y Automatas:");
         
         System.out.println("Automata para validar: a*b+c");
+        A01 automata01 = new A01();
+        automata01.ejecutarValidacion();
         System.out.println();
-        System.out.println("Automata para validar: ab+cs");
+
+        System.out.println("Automata para validar: ab+ca");
+        A02 automata2 = new A02();
+        automata2.ejecutarValidacion();
         System.out.println();
+
         System.out.println("Automata para validar: a+/b+/c+");
         System.out.println();
         A03 automata = new A03();
         automata.ejecutarValidacion();
+
         System.out.println("Automata para validar: 1+/0+1*");
         System.out.println();
         A04 automata02 = new A04();
