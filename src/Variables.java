@@ -22,39 +22,71 @@ public abstract class Variables {
     private int ancho;
 
     private int tiempo;
+
     private int repeticion;
 
-    public Variables() {
+    private int aux3;
 
+    private String texto;
+
+    private int contador;
+
+    public Variables() {
+        this.aux3 = 0;
+        this.texto = "";
+        this.contador = 0;
     }
 
     public Variables(short numero) {
         setNumero(numero);
     }
 
-    public Variables(int repeticion) {
-        setRepeticion(repeticion);
-    }
-
     public Variables(int numero, int numero2) {
         setNumero(numero);
         setNumero2(numero2);
     }
-
-  
+   public Variables(int repeticion) {
+    setRepeticion(repeticion);
+}
 
     public Variables(int numero1, int numero2, int numero3) {
-        setNumero1(numero1);
+
         setNumero2(numero2);
         setNumero3(numero3);
+    }
+
+    public int getAux3() {
+        return aux3;
+    }
+
+    public void setAux3(int aux3) {
+        this.aux3 = aux3;
+    }
+
+    public String getTexto() {
+        return texto;
+    }
+
+    public void setTexto(String texto) {
+        this.texto = texto;
+    }
+
+    public int getContador() {
+        return contador;
+    }
+
+    public void setContador(int contador) {
+        this.contador = contador;
     }
 
     public void setRepeticion(int repeticion) {
         this.repeticion = repeticion;
     }
-  public int getRepeticion() {
+
+    public int getRepeticion() {
         return repeticion;
     }
+
     public int getNumero1() {
         return numero1;
     }

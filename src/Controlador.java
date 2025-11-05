@@ -7,9 +7,19 @@ import Arrays.ejerciciosandy.Coordenadas;
 import Arrays.ejerciciosandy.MatrizCuadrado;
 import Arrays.ejerciciosandy.MatrizIniciales;
 import Arrays.ejerciciosandy.MatrizX;
+import CadenaCaracteres.Ejercicios.AlternarMayusMinus;
+import CadenaCaracteres.Ejercicios.ContarLetra;
+import CadenaCaracteres.Ejercicios.ContarVocal;
+import CadenaCaracteres.Ejercicios.EliminarLetra;
+import CadenaCaracteres.Ejercicios.EliminarVocal;
+import CadenaCaracteres.Ejercicios.FromarAnagrama;
+import CadenaCaracteres.Ejercicios.InvertirLetraMayus;
+import CadenaCaracteres.Ejercicios.InvertirVocalMayus;
+import CadenaCaracteres.Ejercicios.MayusSinJ;
 import Compilador.ejercicio.A04;
 import Compilador.ejercicio.A03;
 import Compilador.ejercicio.A05a;
+import Compilador.ejercicio.A07;
 import Recursividad.ejercicios.ConteoProg;
 import Recursividad.ejercicios.ConteoReg;
 import Recursividad.ejercicios.Factorial;
@@ -61,7 +71,7 @@ public class Controlador extends Variables {
 
     Scanner sc = new Scanner(System.in);
 
-    public static void mostrarPortada() {
+    public void mostrarPortada() {
         final String ANSI_RESET = "\u001B[0m";
         final String ANSI_RED = "\u001B[31m";
         final String ANSI_BLUE = "\u001B[34m";
@@ -207,11 +217,11 @@ public class Controlador extends Variables {
         ejercicio10.mostrarSucesiondeLetraFibonacciDosFor();
         ejercicio10.mostrarSucesiondeLetraFibonacciDosWhile();
         ejercicio10.mostrarSucesiondeLetraFibonacciDosDoWhile();
- 
+
         System.out.println("Figuras:");
         System.out.println("");
         System.out.println("--------FIGURAS--------");
-        Figura figura = new Figura(numero1,5);
+        Figura figura = new Figura(numero1, 5);
         System.out.println("Figura 1: ");
         figura.g2_crearFigura1();
         System.out.println("Figura 2: ");
@@ -251,6 +261,76 @@ public class Controlador extends Variables {
         System.out.println("Figura 19: ");
         figura.g2_crearFigura19();
         System.out.println("Cadenas de Caracteres:");
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Ingrese una frase: ");
+        String texto = sc.nextLine();
+
+        System.out.println("Cadena de Caracteres");
+
+        AlternarMayusMinus alt = new AlternarMayusMinus();
+        ContarLetra contarL = new ContarLetra();
+        ContarVocal contarV = new ContarVocal();
+        EliminarLetra elimL = new EliminarLetra();
+        EliminarVocal elimV = new EliminarVocal();
+        InvertirLetraMayus invL = new InvertirLetraMayus();
+        InvertirVocalMayus invV = new InvertirVocalMayus();
+        MayusSinJ mayusJ = new MayusSinJ();
+        FromarAnagrama ana = new FromarAnagrama();
+
+        System.out.println("AlternarMayusMinus:");
+        System.out.println("   Con for:      " + alt.usandoFor(texto));
+        System.out.println("   Con while:    " + alt.usandoWhile(texto));
+        System.out.println("   Con do-while: " + alt.usandoDoWhile(texto));
+        System.out.println();
+
+        System.out.println("ContarLetra:");
+        System.out.println("   Con for:      " + contarL.usandoFor(texto));
+        System.out.println("   Con while:    " + contarL.usandoWhile(texto));
+        System.out.println("   Con do-while: " + contarL.usandoDoWhile(texto));
+        System.out.println();
+
+        System.out.println("ContarVocal:");
+        System.out.println("   Con for:      " + contarV.usandoFor(texto));
+        System.out.println("   Con while:    " + contarV.usandoWhile(texto));
+        System.out.println("   Con do-while: " + contarV.usandoDoWhile(texto));
+        System.out.println();
+
+        System.out.println("EliminarLetra:");
+        System.out.println("   Con for:      " + elimL.usandoFor(texto));
+        System.out.println("   Con while:    " + elimL.usandoWhile(texto));
+        System.out.println("   Con do-while: " + elimL.usandoDoWhile(texto));
+        System.out.println();
+
+        System.out.println("EliminarVocal:");
+        System.out.println("   Con for:      " + elimV.usandoFor(texto));
+        System.out.println("   Con while:    " + elimV.usandoWhile(texto));
+        System.out.println("   Con do-while: " + elimV.usandoDoWhile(texto));
+        System.out.println();
+
+        System.out.println("InvertirLetraMayus:");
+        System.out.println("   Con for:      " + invL.usandoFor(texto));
+        System.out.println("   Con while:    " + invL.usandoWhile(texto));
+        System.out.println("   Con do-while: " + invL.usandoDoWhile(texto));
+        System.out.println();
+
+        System.out.println("InvertirVocalMayus:");
+        System.out.println("   Con for:      " + invV.usandoFor(texto));
+        System.out.println("   Con while:    " + invV.usandoWhile(texto));
+        System.out.println("   Con do-while: " + invV.usandoDoWhile(texto));
+        System.out.println();
+
+        System.out.println("MayusSinJ:");
+        System.out.println("   Con for:      " + mayusJ.usandoFor(texto));
+        System.out.println("   Con while:    " + mayusJ.usandoWhile(texto));
+        System.out.println("   Con do-while: " + mayusJ.usandoDoWhile(texto));
+        System.out.println();
+
+        System.out.println("FormarAnagrama:");
+        System.out.println("   Con for:      " + ana.usandoFor(texto));
+        System.out.println("   Con while:    " + ana.usandoWhile(texto));
+        System.out.println("   Con do-while: " + ana.usandoDoWhile(texto));
+        System.out.println();
 
         System.out.println("Arrays:");
         Variablesandy datos = new Variablesandy();
@@ -305,7 +385,7 @@ public class Controlador extends Variables {
         System.out.println("\nCarga 12: ");
         carga.g2_cargar12();
         System.out.println("Recursividad:");
- 
+
         System.out.println("Ingrese el primer numero:");
         numero1 = sc.nextInt();
         System.out.println("Ingrese el segundo numero");
@@ -328,15 +408,30 @@ public class Controlador extends Variables {
         ConteoReg conteoReg = new ConteoReg(numero1);
         System.out.print("Conteo Regresivo: ");
         conteoReg.conteoReg();
+        System.out.println();
 
         System.out.println("Grafos y Automatas:");
+        
+        System.out.println("Automata para validar: a*b+c");
+        System.out.println();
 
+
+        System.out.println("Automata para validar: ab+cs");
+        System.out.println();
+
+        
+        System.out.println("Automata para validar: a+/b+/c+");
+        System.out.println();
         A03 automata = new A03();
         automata.ejecutarValidacion();
+        System.out.println("Automata para validar: 1+/0+1*");
+        System.out.println();
         A04 automata02 = new A04();
         automata02.ejecutarValidacion();
         A05a numerodecimal = new A05a();
         numerodecimal.decimal();
+        A07 validador = new A07();
+        validador.ejecutar(sc);
 
     }
 }
