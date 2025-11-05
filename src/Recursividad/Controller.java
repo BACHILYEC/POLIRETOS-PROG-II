@@ -22,7 +22,7 @@ public Controller() {
         super(numero);
     }
 
-    public void Ejercicio(){
+    public void Ejercicio() throws InterruptedException {
 
     Factorial factorial = new Factorial(5);
         factorial.factorial();
@@ -43,10 +43,7 @@ public Controller() {
         System.out.print("Conteo Regresivo: ");
         conteoReg.conteoReg();
 
-    }
-
-    public void iniciarFigura(){
-        System.out.println("");
+    System.out.println("");
         System.out.println("--------FIGURAS--------");
         Figura figura = new Figura(5,9);
         System.out.println("Figura 1: ");
@@ -87,21 +84,31 @@ public Controller() {
         figura.g2_crearFigura18();
         System.out.println("Figura 19: ");
         figura.g2_crearFigura19();
-    }
 
-    public void iniciarCarga() throws InterruptedException{
         System.out.println("");
         System.out.println("--------CARGAS--------");
         Carga carga = new Carga(500);
         //System.out.println("Carga 1: ");
-        //carga.carga1();
+        //carga.cargar1();
         //System.out.println("\nCarga 2: ");
-        //carga.carga2('#');
-        System.out.println("\nCarga 3: ");
-        carga.carga3('-');
-        System.out.println("\nCarga 4: ");
-        carga.carga4('-');
-
-
+        //carga.cargar2('#');
+        //System.out.println("\nCarga 3: ");
+        //carga.cargar3('-');
+        //System.out.println("\nCarga 4: ");
+        //carga.cargar4();
+        //System.out.println("\nCarga 5: ");
+        //carga.cargar5();
+        //System.out.println("\nCarga 6: ");
+        //carga.cargar6();
+        //System.out.println("\nCarga 8: ");
+        //carga.cargar8();
+        //System.out.println("\nCarga 7: ");
+        //carga.cargar7();
+        //System.out.println("\nCarga 10: ");
+        //carga.cargar10();
+        //System.out.println("\nCarga 11: ");
+        //carga.cargar11();
+        System.out.println("\nCarga 12: ");
+        carga.cargar12();
     }
 }

@@ -1,8 +1,18 @@
 package pkCargaSimulador;
 
+import java.util.Random;
+import java.util.Scanner;
+
 import Recursividad.Variables;
 
+
 public class Carga extends Variables{
+
+    java.util.Random random = new java.util.Random();
+
+    public static final String verde = "\u001B[32m";
+    public static final String amarillo = "\u001B[33m";
+    public static final String azul = "\u001B[34m";
 
     public Carga(){
         super();
@@ -13,7 +23,7 @@ public class Carga extends Variables{
         this.setTiempo(tiempo);
     }
 
-    public void carga1() throws InterruptedException {
+    public void cargar1() throws InterruptedException {
         String v[][] = new String[1][5];
         int acum = 0;
         for(int i=0; i<1; i++){
@@ -40,7 +50,7 @@ public class Carga extends Variables{
         
     }
 
-    public void carga2(char caracter) throws InterruptedException {
+    public void cargar2(char caracter) throws InterruptedException {
     
         for(int i=0; i<=20; i++){
             int porcentaje = (i*4)+20;
@@ -60,7 +70,7 @@ public class Carga extends Variables{
         
     }
 
-    public void carga3(char caracter) throws InterruptedException {
+    public void cargar3(char caracter) throws InterruptedException {
     
         for(int i=0; i<=20; i++){
             int porcentaje = (i*4)+20;
@@ -91,11 +101,205 @@ public class Carga extends Variables{
         
     }
 
+    public void cargar4() throws InterruptedException {
+    
+        for (int i = 0; i <= 100; i += 10) {
+            String animacion = (i / 10) % 2 == 0 ? "o0o" : "0o0";
 
+            System.out.print("\r" + animacion + " " + i + "%");
+            Thread.sleep(300);
+        }
+        System.out.println();
+    }
 
+    public void cargar5() throws InterruptedException {
+    
+        for (int i = 0; i <= 100; i += 5) {
+            int progreso = i * 20/ 100;
+            String barra = "[";
 
+            for (int j = 0; j < 20; j++) {
+                if (j < progreso) {
+                    barra = barra + "=";
+                } else if (j == progreso) {
+                    if ((i / 5) % 2 == 0) {
+                        barra = barra + ">";
+                    } else {
+                        barra = barra + ">";
+                    }
+                } else {
+                    barra = barra + " ";
+                }
+            }
 
+            barra = barra + "] " + i + "%";
 
+            System.out.print("\r" + barra);
+            Thread.sleep(300);
+        }
+    }
 
+    public void cargar6() throws InterruptedException {
+        for(int i = 0; i <= 20; i++) {
+            int porcentaje = (i * 4) + 20;
+            System.out.print("\r[");
+            if(i <= 10) {
+            for(int j=0; j<10; j++) {
+                if(j == i) {
+                    System.out.print("<=>");
+                } else {
+                    System.out.print("   ");
+                }
+            }
+            } else {
+            for(int j=0; j<10; j++) {
+                if(j == (20 - i)) {
+                    System.out.print("<=>");
+                } else {
+                    System.out.print("   ");
+                }
+            }
+            }
+            System.out.print("] " + porcentaje + "%");
+            Thread.sleep(getTiempo());
+        }
+        System.out.println();
+    }
+
+    public void cargar7() throws InterruptedException {
+        for (int i = 0; i <= 20; i++) {
+        int porcentaje = i * 5;
+        System.out.print("\r[");
+        char[] rot = {'_','\\', '|', '/', '_'};
+        char punta = rot[i % rot.length];
+            for (int j = 0; j < 20; j++) {
+                if (j < i) {
+                    System.out.print("="); 
+                } else if (j == i) {
+                    System.out.print(punta); 
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.print("] " + porcentaje + "%");
+            Thread.sleep(getTiempo());
+        }
+        System.out.println();
+    }
+
+    public void cargar8() throws InterruptedException {
+        System.out.print("Ingresar nombre y apellido: ");
+        Scanner sc = new Scanner(System.in);
+        String nombre = sc.nextLine();
+        int longitud = nombre.length();
+        for (int i = 0; i <= longitud; i++) {
+            int porcentaje = (i * 100) / longitud;
+
+            System.out.print("\r[");
+            for (int j = 0; j < longitud; j++) {
+                if (j < i) {
+                    System.out.print(nombre.charAt(j));
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.print("] " + porcentaje + "%");
+            Thread.sleep(getTiempo());
+        }
+    }
+
+    public void cargar9() throws InterruptedException {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingresar nombre completo: ");
+        String nombre = sc.nextLine();
+        int longitud = nombre.length();
+        for (int i = 0; i < longitud; i++) {
+            int porcentaje = (i + 1) * 100 / longitud;
+            System.out.println(nombre.charAt(i) + "   " + porcentaje + "%");
+            Thread.sleep(getTiempo());
+        }
+        System.out.println("");
+    }
+
+    public void cargar10() throws InterruptedException {
+        int archivoRandom = random.nextInt(10,101);
+
+        System.out.println("cargando archivo de " + archivoRandom + " kB: ");
+        System.out.print("[");
+        for (int cargado = 0; cargado <= archivoRandom; cargado++) {
+        Thread.sleep(100);
+        int porcentaje = (int) ((cargado * 100.0) / archivoRandom);
+        String color = verde;
+        if (porcentaje < 80){
+            color = amarillo;
+        }
+        if (porcentaje < 50){
+                color = azul;
+        }
+        String barra = "=".repeat(porcentaje / 5);
+        System.out.print("\r" + color + "[" + barra + "> " + porcentaje + "%]");
+        }
+        System.out.println("");
+    }
+
+    public void cargar11() throws InterruptedException {
+        int niveles = 50; // cantidad de señales
+        int anchoTotal = 25; // ancho para centrar visualmente
+
+        System.out.println("Generando señales simétricas:\n");
+
+        for (int nivel = 1; nivel <= niveles; nivel++) {
+            int longitud = random.nextInt(0, 11);
+            Thread.sleep(100);
+            String color = verde;
+            if (longitud < 7) {
+                color = amarillo;
+            }
+            if (longitud < 4) {
+                color = azul;
+            }
+            String parte = "";
+            for (int i = 0; i < longitud; i++) {
+                parte += "-";
+            }
+            String figura = color + parte + "|" + parte;
+            int espacios = (anchoTotal - figura.length()) / 2;
+            String padding = "";
+            for (int i = 0; i < espacios; i++) {
+                padding += " ";
+            }
+            System.out.println(padding + figura);
+        }
+        System.out.println();
+    }
+
+    public void cargar12() throws InterruptedException{
+       for(int i = 0; i <= 20; i++) {
+        int porcentaje = (i * 4) + 20;
+        System.out.print("\r");
+        if(i <= 10) {
+            for(int j=0; j<10; j++) {
+                if(j == i) {
+                    System.out.print("oo-"+"\\"+"(>_<)"+"/-oo");
+                } else {
+                    System.out.print("   ");
+                }
+            }
+        } else {
+            for(int j=0; j<10; j++) {
+                if(j == (20 - i)) {
+                    System.out.print("oo-"+"\\"+"(>_<)"+"/-oo");
+                } else {
+                    System.out.print("   ");
+                }
+        }
+    }
+        Thread.sleep(getTiempo());
+        }
+        System.out.println();
+    }
 
 }
+
+
+
