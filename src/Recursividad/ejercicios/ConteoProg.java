@@ -6,7 +6,7 @@ public class ConteoProg extends Variables {
 
 
     public ConteoProg(int numero) {
-        super(numero);
+        super(Math.abs(numero));
         setCiclo(0);
     }
 
