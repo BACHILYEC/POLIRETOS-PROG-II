@@ -29,4 +29,17 @@ public class Tool {
     public int getConsoleNumero() {
         return getConsoleNumero("Ingrese un numero: ", 0, 10);
     }
+
+    public static String leerCadena(String mensaje) {
+    Scanner scanner = new Scanner(System.in);
+    String entrada = "";
+    System.out.print(mensaje);
+    try {
+        entrada = scanner.nextLine().trim();
+    } catch (Exception e) {
+        System.out.println("Ocurrió un error al leer la entrada. Intente de nuevo.");
+        entrada = "";
+    }
+    return entrada;
+}
 }
