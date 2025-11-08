@@ -159,20 +159,21 @@ public class Controlador extends Variables {
         seriePronic.imprimirPronicDoWhile();
 
         System.out.println("Serie de Caracteres:");
-        setRepeticion(Tool.leerEnteroPositivo("Ingrese un número entero positivo: "));
+        Tool tool = new Tool();
+        setRepeticion(tool.getConsoleNumero("Ingrese el numero de repeticiones (1-10): ", 1, 10)); 
 
         S1 ejercicio1 = new S1(getRepeticion());
         ejercicio1.g2_crearSerieMasMenosFor();
         ejercicio1.g2_crearSerieMasMenosWhile();
         ejercicio1.g2_crearSerieMasMenosDoWhile();
 
-        System.out.println("Serie Fibonacci con signo + :");
+        System.out.println("Serie Fibonacci con signo: ");
         S2 ejercicio2 = new S2(getRepeticion());
         ejercicio2.g2_crearSerieFibonacciMasFor();
         ejercicio2.g2_crearSerieFibonacciMasWhile();
         ejercicio2.g2_crearSerieFibonacciMasDoWhile();
 
-        System.out.println("Serie de números primos con signo +: ");
+        System.out.println("Serie de numeros primos con signo: ");
         S3 ejercicio3 = new S3(getRepeticion());
         ejercicio3.g2_crearSeriePrimoFor();
         ejercicio3.g2_crearSeriePrimoWhile();
@@ -184,7 +185,7 @@ public class Controlador extends Variables {
         ejercicio4.g2_mostrarSucesionSignoWhile();
         ejercicio4.g2_mostrarSucesionSignoDoWhile();
 
-        System.out.println("Sucesión de Slash: ");
+        System.out.println("Sucesion de Slash: ");
         S5 ejercicio5 = new S5(getRepeticion());
         ejercicio5.g2_serieSlashFor();
         ejercicio5.g2_serieSlashWhile();
@@ -214,7 +215,7 @@ public class Controlador extends Variables {
         ejercicio9.mostrarSucesionLetrasImparesWhile();
         ejercicio9.mostrarSucesionLetrasImparesDoWhile();
 
-        System.out.println("Sucesion de Letros con Fibonacci: ");
+        System.out.println("Sucesion de Letras con Fibonacci: ");
         S10 ejercicio10 = new S10(getRepeticion());
         ejercicio10.mostrarSucesiondeLetraFibonacciDosFor();
         ejercicio10.mostrarSucesiondeLetraFibonacciDosWhile();
@@ -315,7 +316,6 @@ public class Controlador extends Variables {
         System.out.println("   Con while:    " + invL.usandoWhile(texto));
         System.out.println("   Con do-while: " + invL.usandoDoWhile(texto));
         System.out.println();
-
         System.out.println("InvertirVocalMayus:");
         System.out.println("   Con for:      " + invV.usandoFor(texto));
         System.out.println("   Con while:    " + invV.usandoWhile(texto));
@@ -327,7 +327,6 @@ public class Controlador extends Variables {
         System.out.println("   Con while:    " + mayusJ.usandoWhile(texto));
         System.out.println("   Con do-while: " + mayusJ.usandoDoWhile(texto));
         System.out.println();
-
         System.out.println("FormarAnagrama:");
         System.out.println("   Con for:      " + ana.usandoFor(texto));
         System.out.println("   Con while:    " + ana.usandoWhile(texto));
@@ -336,7 +335,6 @@ public class Controlador extends Variables {
 
         System.out.println("Arrays:");
         Variablesandy datos = new Variablesandy();
-
         System.out.println("\nA01-Carga Nombre");
         CargaNombre programa = new CargaNombre();
         programa.ejecutar();
@@ -358,9 +356,7 @@ public class Controlador extends Variables {
         MatrizCuadrado.matrizAleatoria_For(datos.nombreCompleto, datos.tamanio);
         MatrizCuadrado.matrizAleatoria_While(datos.nombreCompleto, datos.tamanio);
         MatrizCuadrado.matrizAleatoria_DoWhile(datos.nombreCompleto, datos.tamanio);
-
         System.out.println("Loadings:");
-
         System.out.println("");
         System.out.println("--------CARGAS--------");
         Carga carga = new Carga(10);

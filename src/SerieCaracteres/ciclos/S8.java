@@ -9,59 +9,67 @@ public class S8 extends IHVariable{
     }
 
     public void g2_mostrarMultiplodeDosLetraFor(){
-        System.out.println("Con FOR:");
-        for(int i=1; i<=getRepeticion(); i++)
-        {
-            int c= i*2;
-            char letra = (char) ('a' + (i-1) %26) ;
+        System.out.println("Con For: ");
 
-            for(int j=1; j<=c; j++)
-            {
-                System.out.print((i == 1) ? 'a': letra);
+        char letra = 'a';
+        int num = 2;
+
+        for(int i = 1; i <= getRepeticion(); i++){
+            for(int j = 1; j <=num ; j++){
+                System.out.print(letra);
             }
-            System.out.print("  ");
 
+            System.out.printf(" ");
+            letra = (char) (letra +1);
+            num +=2;
         }
         System.out.println("");
     }
 
     public void g2_mostrarMultiplodeDosLetraWhile(){
-        System.out.println("Con WHILE:");
-        int i=1;
-        while(i<=getRepeticion())
-        {
-            int c= i*2;
-            char letra = (char) ('a' + (i-1) %26) ;
+        System.out.println("Con While: ");
 
-            int j=1;
-            while(j<=c)
-            {
-                System.out.print((i == 1) ? 'a': letra);
+        char letra = 'a';
+        int num = 2;
+        int i = 1;
+
+        while(i <= getRepeticion()){
+            int j = 1;
+
+            while(j <= num){
+                System.out.print(letra);
                 j++;
             }
-            System.out.print("  ");
+
+            System.out.printf(" ");
+            letra = (char) (letra +1);
+            num +=2;
             i++;
         }
+
         System.out.println("");
     }
 
     public void g2_mostrarMultiplodeDosLetraDoWhile(){
-        System.out.println("Con DO WHILE:");
-        int i=1;
-        do
-        {
-            int c= i*2;
-            char letra = (char) ('a' + (i-1) %26) ;
+        System.out.println("Con Do While: ");
 
-            int j=1;
-            do
-            {
-                System.out.print((i == 1) ? 'a': letra);
+        char letra = 'a';
+        int num = 2;
+        int i = 1;
+
+        do{
+            int j = 1;
+
+            do{
+                System.out.print(letra);
                 j++;
-            }while(j<=c);
-            System.out.print("  ");
+            }while(j <= num);
+
+            System.out.printf(" ");
+            letra = (char) (letra +1);
+            num +=2;
             i++;
-        }while(i<=getRepeticion());
+        }while(i <= getRepeticion());
 
         System.out.println("");
     }

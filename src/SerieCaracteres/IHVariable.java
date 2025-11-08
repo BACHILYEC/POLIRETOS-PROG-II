@@ -15,12 +15,19 @@ public abstract class IHVariable {
         setRepeticion(repeticion);
     }
 
+    public void resetNumero(){
+        setNumero1(0);
+        setNumero2(1);
+        setNumero3(0);
+    }
+
     public IHVariable(int repeticion, int numero1, int numero2, int numero3) {
         setRepeticion(repeticion);
         setNumero1(numero1);
         setNumero2(numero2);
         setNumero3(numero3);
     }
+
 
     public int getRepeticion() { return repeticion; }
     public void setRepeticion(int repeticion) { this.repeticion = repeticion; }

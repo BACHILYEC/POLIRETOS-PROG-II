@@ -32,13 +32,14 @@ public class S6 extends IHVariable{
     }
 
     public void g2_mostrarLetraDoWhile(){
-        System.out.println("Con DO WHILE:");
+       System.out.println("Con DO WHILE:");
 
         char letra = 'a';
         do
         {
             System.out.print(letra + "  ");
             letra++;
+
         }while(letra < 'a' + getRepeticion());
 
         System.out.println("");

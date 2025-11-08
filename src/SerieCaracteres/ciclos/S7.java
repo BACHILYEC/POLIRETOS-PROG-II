@@ -25,41 +25,40 @@ public class S7 extends IHVariable{
     }
 
     public void g2_mostrarLetraSignoWhile(){
-        System.out.println("Con WHILE:");
-        int i=0;
-        while(i<getRepeticion())
-        {
-            char letra = (char) ('a' + (2*i) %26) ;
-            char mas='+';
-            char menos='-';
-
-            if (i % 2 == 0)
-                System.out.print(letra + " " + mas + " ");
-            else
-                System.out.print(letra + " " + menos + " ");
-
+        System.out.println("Con While: ");
+        char letra = 'a';
+        int i = 1;
+        while(i <= getRepeticion()){
+            if(i % 2 != 0){
+                System.out.printf(letra + " + ");
+                letra = (char) (letra + 2);
+            }
+            if(i % 2 == 0){
+                System.out.printf(letra + " - ");
+                letra = (char) (letra + 2);
+                
+            }
             i++;
         }
         System.out.println("");
     }
 
     public void g2_mostrarLetraSignoDoWhile(){
-        System.out.println("Con DO WHILE:");
-        int i=0;
-        do
-        {
-            char letra = (char) ('a' + (2*i) %26) ;
-            char mas='+';
-            char menos='-';
+        System.out.println("Con Do-While: ");
+        char letra = 'a';
+        int i = 1;
+        do{
+            if(i % 2 != 0){
+                System.out.printf(letra + " + ");
+                letra = (char) (letra + 2);
+            }
+            if(i % 2 == 0){
+                System.out.printf(letra + " - ");
+                letra = (char) (letra + 2);
 
-            if (i % 2 == 0)
-                System.out.print(letra + " " + mas + " ");
-            else
-                System.out.print(letra + " " + menos + " ");
-
+            }
             i++;
-        }while(i<getRepeticion());
-
+        }while(i <= getRepeticion());
         System.out.println("");
     }
 

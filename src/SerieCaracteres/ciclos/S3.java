@@ -9,89 +9,132 @@ public class S3 extends IHVariable {
     }
 
     public void g2_crearSeriePrimoFor(){
-        System.out.println("Con FOR:");
+        System.out.println("Con For: ");
 
-        int contadorPrimos = 0;
-        for(int i=2; contadorPrimos < getRepeticion(); i++){
-            boolean esPrimo = true;
-            for(int j=2; j*j <= i; j++){
-                if(i % j == 0){
-                    esPrimo = false;
-                    break;
+        for(int i = 2; i <= getRepeticion(); i++){
+            if(g2_verificarPrimoFor(i)){
+
+                for(int j = 1; j <= i; j++){
+
+                    System.out.printf("+");
+
                 }
+                System.out.printf(" ");
             }
 
-            if(esPrimo){
-                for(int k=0; k < i; k++){
-                    System.out.print("+");
-                }
-                System.out.print("  ");
-                contadorPrimos++;
-            }
         }
 
         System.out.println("");
+    }
+
+    public boolean g2_verificarPrimoFor(int numero){
+        if (numero < 2)
+            return false;
+            
+        for(int i = 2; i <= Math.sqrt(numero); i++){
+
+            if(numero % i == 0)
+                return false;
+        }
+
+        return true;
+        
     }
 
     public void g2_crearSeriePrimoWhile(){
-        System.out.println("Con WHILE:");
-        int contadorPrimos = 0;
+        System.out.println("Con While: ");
+
         int i = 2;
-        while(contadorPrimos < getRepeticion()){
-            boolean esPrimo = true;
-            int j = 2;
-            while(j * j <= i){
-                if(i % j == 0){
-                    esPrimo = false;
-                    break;
+
+        while(i <= getRepeticion()){
+
+            if(g2_verificarPrimoWhile(i)){
+
+                int j = 1;
+
+                while (j <= i){
+
+                    System.out.printf("+");
+                    j++;
+                    
                 }
-                j++;
+                System.out.printf(" ");
             }
 
-            if(esPrimo){
-                int k = 0;
-                while(k < i){
-                    System.out.print("+");
-                    k++;
-                }
-                System.out.print("  ");
-                contadorPrimos++;
-            }
             i++;
+
         }
         System.out.println("");
     }
 
-    public void g2_crearSeriePrimoDoWhile(){
-        System.out.println("Con DO WHILE:");
-        int contadorPrimos = 0;
-        int i = 2;
-        do{
-            boolean esPrimo = true;
-            int j = 2;
-            do{
-                if(j * j > i) break;
-                if(i % j == 0){
-                    esPrimo = false;
-                    break;
-                }
-                j++;
-            }while(true);
+    public boolean g2_verificarPrimoWhile(int numero){
 
-            if(esPrimo){
-                int k = 0;
-                do{
-                    if(k >= i) break;
-                    System.out.print("+");
-                    k++;
-                }while(true);
-                System.out.print("  ");
-                contadorPrimos++;
+        if (numero < 2)
+            return false;
+        
+        int i = 2;
+
+        while(i <= Math.sqrt(numero)){
+            if (numero % i == 0){
+                return false;
             }
+
+        i++;
+
+        }
+
+        return true;
+
+    }
+
+    public void g2_crearSeriePrimoDoWhile(){
+        System.out.println("Con Do While: ");
+
+        int i = 2;
+
+        do{
+
+            if(g2_verificarPrimoDoWhile(i)){
+
+                int j = 1;
+
+                do{
+                    System.out.printf("+");
+                    j++;
+                }while (j <= i);
+                
+                System.out.printf(" ");
+            }
+
             i++;
-        }while(contadorPrimos < getRepeticion());
+
+        }while(i <= getRepeticion());
 
         System.out.println("");
+    }
+
+    public boolean g2_verificarPrimoDoWhile(int numero){
+
+        if(numero ==2) // por Do While, 
+            return true;
+
+        if (numero < 2)
+            return false;
+        
+        int i = 2;
+
+        do{
+
+            if (numero % i == 0){
+                return false;
+            }
+
+            i++;
+
+        }while(i <= Math.sqrt(numero));
+
+        return true;
+
     }
 
 }

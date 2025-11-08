@@ -4,78 +4,108 @@ import SerieCaracteres.IHVariable;
 
 public class S10 extends IHVariable{
 
-    public S10(int repeticion) {
-        super(repeticion);
+    public S10(int numero){
+        super(numero);
+        setNumero1(0);
+        setNumero2(1);
+        setNumero3(0);
     }
 
     public void mostrarSucesiondeLetraFibonacciDosFor(){
-        System.out.println("Con FOR:");
-        int a = 0, b = 1, c = 0;
-        System.out.print("a  ");
-        for (int i = 1; i < getRepeticion(); i++)
-        {
-            c = a + b;
-            a= b;
-            b = c;
+        System.out.println("Con For: ");
+        char letra = 'a';
 
-            for (int j = 1; j <= a; j++)
-            {
-                char letra = (char) ('a' + i % 26);
+        System.out.print(letra + " ");
+
+        letra = (char) (letra + 1);
+
+        for(int i = 1; i < getRepeticion(); i++){
+
+            setNumero3(getNumero1()+getNumero2());
+            setNumero1(getNumero2());
+            setNumero2(getNumero3());
+
+            for(int j = 1; j <= getNumero1(); j++){
                 System.out.print(letra);
             }
-            System.out.print("  ");
+
+            letra = (char) (letra + 1);
+            System.out.printf(" ");
+        
         }
-        System.out.println("");
+
+        System.out.println(" ");
 
     }
 
     public void mostrarSucesiondeLetraFibonacciDosWhile(){
-        System.out.println("Con WHILE:");
-        int a = 0, b = 1, c = 0;
-        System.out.print("a  ");
+        resetNumero();
+
+        System.out.println("Con While: ");
+        char letra = 'a';
+
+        System.out.print(letra + " ");
+
+        letra = (char) (letra + 1);
+
         int i = 1;
-        while (i < getRepeticion())
-        {
-            c = a + b;
-            a= b;
-            b = c;
+
+        while(i < getRepeticion()){
+            setNumero3(getNumero1()+getNumero2());
+            setNumero1(getNumero2());
+            setNumero2(getNumero3());
 
             int j = 1;
-            while (j <= a)
-            {
-                char letra = (char) ('a' + i % 26);
+
+            while(j <= getNumero1()){
                 System.out.print(letra);
+
                 j++;
             }
-            System.out.print("  ");
+
+            letra = (char) (letra + 1);
+            System.out.printf(" ");
+
+
             i++;
         }
-        System.out.println("");
+        
+        System.out.println(" ");
     }
 
     public void mostrarSucesiondeLetraFibonacciDosDoWhile(){
-        System.out.println("Con DO WHILE:");
-        int a = 0, b = 1, c = 0;
-        System.out.print("a  ");
+        resetNumero();
+
+        System.out.println("Con Do While: ");
+        char letra = 'a';
+
+        System.out.print(letra + " ");
+
+        letra = (char) (letra + 1);
+
         int i = 1;
-        do
-        {
-            c = a + b;
-            a= b;
-            b = c;
+
+        do{
+            setNumero3(getNumero1()+getNumero2());
+            setNumero1(getNumero2());
+            setNumero2(getNumero3());
 
             int j = 1;
-            do
-            {
-                char letra = (char) ('a' + i % 26);
+
+            do{
                 System.out.print(letra);
                 j++;
-            } while (j <= a);
-            System.out.print("  ");
-            i++;
-        } while (i < getRepeticion()); // Le pongo solo menor que, porque ya imprimí la primera letra 'a' antes del bucle.
 
-        System.out.println("");
+            }while(j <= getNumero1());
+
+            letra = (char) (letra + 1);
+            System.out.printf(" ");
+
+            i++;
+
+        }while(i < getRepeticion());
+
+        System.out.println(" ");
     }
 
 }
