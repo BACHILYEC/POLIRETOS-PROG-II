@@ -1,32 +1,32 @@
 package SerieCaracteres.ciclos;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Tool {
 
-    private static Scanner scanner = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
 
-    public static int leerEnteroPositivo(String mensaje) {
-        int numero = -1;
-        while (numero <= 0) {
+    public int getConsoleNumero(String mensaje, int minimo, int maximo) {
+        int valor;
+        String entrada;
+        while (true) {
             System.out.print(mensaje);
+            entrada = scanner.nextLine(); // Lee toda la línea como String
             try {
-                numero = scanner.nextInt();
-                if (numero <= 0) {
-                    System.out.println("Error: ingrese un numero mayor que 0.");
-                }
-            } catch (InputMismatchException e) {
-                System.out.println("Error: debe ingresar un numero entero.");
-                scanner.next(); // Limpia el buffer
+                valor = Integer.parseInt(entrada); // Intenta convertir a int
+                if (valor >= minimo && valor <= maximo)
+                    break;
+                else
+                    System.out.println(":( Valores entre " + minimo + " y " + maximo);
+            } catch (NumberFormatException e) {
+                System.out.println(":( Ingrese solo numeros validos entre " + minimo + " y " + maximo);
             }
         }
-        return numero;
+        return valor;
     }
 
-    public static String leerCadena(String mensaje) {
-        System.out.print(mensaje);
-        Scanner scanner = new Scanner(System.in);
-        return scanner.nextLine().trim();
+    // Sobrecarga para usar valores por defecto
+    public int getConsoleNumero() {
+        return getConsoleNumero("Ingrese un numero: ", 0, 10);
     }
 }

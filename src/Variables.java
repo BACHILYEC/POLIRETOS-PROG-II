@@ -45,9 +45,10 @@ public abstract class Variables {
         setNumero(numero);
         setNumero2(numero2);
     }
-   public Variables(int repeticion) {
-    setRepeticion(repeticion);
-}
+
+    public Variables(int repeticion) {
+        setRepeticion(repeticion);
+    }
 
     public Variables(int numero1, int numero2, int numero3) {
 

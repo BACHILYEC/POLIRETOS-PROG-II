@@ -9,46 +9,59 @@ public class S5 extends IHVariable{
     }
 
     public void g2_serieSlashFor(){
-        System.out.println("Con FOR:");
-        
-        for(int i=1; i<=getRepeticion(); i++)
-        {
-            for(int j=1; j<=3; j++)
-            {
-                int posicion = (j-1) % 3;
-                if (posicion == 0)
-                    System.out.print("\\  ");
-                else if (posicion == 1)
-                    System.out.print("|  ");
-                else 
-                    System.out.print("/  ");
+        System.out.println("Con For: ");
+
+        for(int i = 1; i <= getRepeticion(); i++){
+            if(i % 2 != 0){
+                for(int j = 1; j<=3; j++){
+                    if(j % 3 == 1)
+                        System.out.printf("\\ ");
+                    if(j % 3 == 2)
+                        System.out.printf("| ");
+                    if(j % 3 == 0)
+                        System.out.printf("/  ");
+                    
+                }
+            } else{
+                for(int k = 1; k<=2; k++){
+                    if(k % 2 == 0)
+                        System.out.printf("- |  ");
+                }
             }
-            System.out.print(" - |  ");
         }
 
         System.out.println("");
     }
 
     public void g2_serieSlashWhile(){
-        System.out.println("Con WHILE:");
-
+        System.out.println("Con While: ");
         int i = 1;
-        while(i <= getRepeticion())
-        {
-            int j = 1;
-            while(j <= 3)
-            {
-                int posicion = (j-1) % 3;
-                if (posicion == 0)
-                    System.out.print("\\  ");
-                else if (posicion == 1)
-                    System.out.print("|  ");
-                else 
-                    System.out.print("/  ");
 
-                j++;
+        while(i <= getRepeticion()){
+            if(i % 2 != 0){
+                int j = 1;
+
+                while(j <= 3){
+                    if(j % 3 == 1)
+                        System.out.printf("\\ ");
+                    if(j % 3 == 2)
+                        System.out.printf("| ");
+                    if(j % 3 == 0)
+                        System.out.printf("/  ");
+                    
+                    j++;
+                }
+            } else{
+                int k = 1;
+
+                while(k <= 2){
+                    if(k % 2 == 0)
+                        System.out.printf("- |  ");
+                    
+                    k++;
+                }
             }
-            System.out.print(" - |  ");
+
             i++;
         }
 
@@ -56,27 +69,36 @@ public class S5 extends IHVariable{
     }
 
     public void g2_serieSlashDoWhile(){
-        System.out.println("Con DO WHILE:");
-
+        System.out.println("Con Do While: ");
         int i = 1;
-        do
-        {
-            int j = 1;
-            do
-            {
-                int posicion = (j-1) % 3;
-                if (posicion == 0)
-                    System.out.print("\\  ");
-                else if (posicion == 1)
-                    System.out.print("|  ");
-                else 
-                    System.out.print("/  ");
 
-                j++;
-            } while(j <= 3);
-            System.out.print(" - |  ");
+        do{
+            if(i % 2 != 0){
+                int j = 1;
+
+                do{
+                    if(j % 3 == 1)
+                        System.out.printf("\\ ");
+                    if(j % 3 == 2)
+                        System.out.printf("| ");
+                    if(j % 3 == 0)
+                        System.out.printf("/  ");
+                    
+                    j++;
+                }while(j <= 3);
+            } else{
+                int k = 1;
+
+                do{
+                    if(k % 2 == 0)
+                        System.out.printf("- |  ");
+                    
+                    k++;
+                }while(k <= 2);
+            }
+
             i++;
-        } while(i <= getRepeticion());
+        }while(i <= getRepeticion());
 
         System.out.println("");
     }

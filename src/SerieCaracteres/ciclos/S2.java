@@ -4,61 +4,57 @@ import SerieCaracteres.IHVariable;
 
 public class S2 extends IHVariable {
 
-    public S2(int repeticion) {
-        super(repeticion);
-        inicializarFibonacci();
-    }
-
-    private void inicializarFibonacci() {
-    setNumero1(0);
-    setNumero2(1);
-    setNumero3(0);
+    public S2(int numero){
+        super(numero);
+        setNumero1(0);
+        setNumero2(1);
+        setNumero3(0);
     }
 
     public void g2_crearSerieFibonacciMasFor(){
 
-        System.out.println("Con FOR:");
+        System.out.println("Con For: ");
 
-        for(int i=1; i<=getRepeticion(); i++){
+        for(int i = 1; i<=getRepeticion(); i ++){
 
-            setNumero3(getNumero1() + getNumero2());
-
+            setNumero3(getNumero1()+getNumero2());
             setNumero1(getNumero2());
             setNumero2(getNumero3());
 
-            for(int j=1; j<=getNumero1(); j++)
-                System.out.print("+");
-            
-            System.out.print(" ");
-            
+            for(int j = 1; j<=getNumero1(); j++){
+                System.out.printf("+ ");
+            }
+            System.out.printf(" ");
+
         }
         System.out.println("");
     }
 
     public void g2_crearSerieFibonacciMasWhile(){
 
-        System.out.println("Con WHILE:");
+        System.out.println("Con While: ");
 
-        inicializarFibonacci();
+        resetNumero();
+        int i = 1;
 
-        int i=1;
-        while(i <=getRepeticion()){
+        while(i<=getRepeticion()){
 
-            setNumero3(getNumero1() + getNumero2());
+            
 
+            setNumero3(getNumero1()+getNumero2());
             setNumero1(getNumero2());
             setNumero2(getNumero3());
 
-            int j=1;
-            while(j <= getNumero1()){
-                System.out.print("+");
+            int j = 1;
+
+            while(j<=getNumero1()){
+                System.out.printf("+ ");
                 j++;
             }
 
-            System.out.print(" ");
-
+            System.out.printf(" ");
+            
             i++;
-
         }
 
         System.out.println("");
@@ -67,28 +63,31 @@ public class S2 extends IHVariable {
 
     public void g2_crearSerieFibonacciMasDoWhile(){
 
-        System.out.println("Con DO WHILE:");
-        
-        inicializarFibonacci();
-        int i=1;
+        System.out.println("Con Do While: ");
+
+        resetNumero();
+
+        int i = 1;
         do{
 
-            setNumero3(getNumero1() + getNumero2());
-
+            setNumero3(getNumero1()+getNumero2());
             setNumero1(getNumero2());
             setNumero2(getNumero3());
 
-            int j=1;
-            do{
-                System.out.print("+");
-                j++;
-            }while(j <= getNumero1());
+            int j = 1;
 
-            System.out.print(" ");
+            do{
+                
+                System.out.printf("+ ");
+                j++;
+
+            }while(j<=getNumero1());
+
+            System.out.printf(" ");
 
             i++;
 
-        }while(i <=getRepeticion());
+        }while(i<=getRepeticion());
 
         System.out.println("");
 

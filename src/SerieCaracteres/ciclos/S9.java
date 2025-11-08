@@ -9,21 +9,21 @@ public class S9 extends IHVariable{
     }
 
     public void mostrarSucesionLetrasImparesFor(){
-        System.out.println("Con FOR:");
-        int a= 1, b=2, c=0;
-        System.out.print("a  ");
-        for(int i=1; i<getRepeticion(); i++)
-        {
-            c= a+b;
-            a= c;
-            
-            for(int j =1; j<=a; j++)
-            {
-                char letra =(char) ('a'+ i % 26); 
-                System.out.print(letra);
+        System.out.println("Con for: ");
+        char letra = 'a';
+        for(int i = 1; i <= 2*getRepeticion(); i++){
+            if(i%2 != 0){
+                for(int j = 1; j <= i; j++){
+                    System.out.print(letra);
+                }
+                
+                letra = (char) (letra +1);
+            }else{
+                System.out.printf(" ");
             }
-            System.out.print("  ");
+
         }
+
         System.out.println("");
 
 
@@ -53,26 +53,27 @@ public class S9 extends IHVariable{
     }
 
     public void mostrarSucesionLetrasImparesDoWhile(){
-        System.out.println("Con DO WHILE:");
-        int a= 1, b=2, c=0;
-        System.out.print("a  ");
-        int i=1;
-        do
-        {
-            c= a+b;
-            a= c;
-            
-            int j=1;
-            do
-            {
-                char letra =(char) ('a'+ i % 26); 
-                System.out.print(letra);
-                j++;
-            }while(j<=a);
-            System.out.print("  ");
+        System.out.println("Con Do While: ");
+        char letra = 'a';
+        int i = 1;
+
+        do{
+            if(i%2 != 0){
+                int j = 1;
+
+                do{
+                    System.out.print(letra);
+                    j++;
+                }while(j <= i);
+
+                letra = (char) (letra +1);
+            }else{
+                System.out.printf(" ");
+            }
+
             i++;
-        }while(i<getRepeticion()); //Le pongo solo menor que, porque ya imprimí la primera letra 'a' antes del bucle.
-        
+        }while(i <= 2*getRepeticion());
+
         System.out.println("");
     }
     

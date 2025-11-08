@@ -10,23 +10,25 @@ public class S4 extends IHVariable {
 
     public void g2_mostrarSucesionSignoFor(){
 
-        System.out.println("Con FOR:");
+        System.out.println("Con For: ");
+        for(int i=1; i<=getRepeticion(); i++){
+            
+            for(int j= 1; j<=4; j++){
+                if(j % 4 == 1)
+                    System.out.printf("+ ");
+                
+                if(j % 4 == 2)
+                    System.out.printf("- ");
+                
+                if(j % 4 == 3)
+                    System.out.printf("* ");
 
-        for(int j=1; j<=getRepeticion(); j++){
+                if(j % 4 == 0)
+                    System.out.printf("/ ");
+                
+            }
 
-            for(int i = 1; i<=4; i++){
-
-                int posicion = (i-1) % 4;
-                // Determiné el signo a imprimir según la posición 
-                if (posicion == 0)
-                    System.out.print("+  ");
-                else if (posicion == 1)
-                    System.out.print("-  ");
-                else if (posicion == 2)
-                    System.out.print("*  ");
-                else
-                    System.out.print("/  ");
-            }        
+            System.out.printf(" ");
         }
 
         System.out.println("");
@@ -35,60 +37,63 @@ public class S4 extends IHVariable {
 
     public void g2_mostrarSucesionSignoWhile(){
 
-        System.out.println("Con WHILE:");
+        System.out.println("Con While: ");
+        int i = 1;
 
-        int j = 1;
-        while(j <= getRepeticion()){
+        while(i<=getRepeticion()){
+            int j = 1;
 
-            int i = 1;
-            while(i <= 4){
+            while(j<=4){
+                if(j % 4 == 1)
+                    System.out.printf("+ ");
+                
+                if(j % 4 == 2)
+                    System.out.printf("- ");
+                
+                if(j % 4 == 3)
+                    System.out.printf("* ");
 
-                int posicion = (i-1) % 4;
-                // Determiné el signo a imprimir según la posición 
-                if (posicion == 0)
-                    System.out.print("+  ");
-                else if (posicion == 1)
-                    System.out.print("-  ");
-                else if (posicion == 2)
-                    System.out.print("*  ");
-                else
-                    System.out.print("/  ");
-
-                i++;
+                if(j % 4 == 0)
+                    System.out.printf("/ ");
+                
+                j++;
             }
 
-            j++;
+            System.out.printf(" ");
+            i++;
         }
+
         System.out.println("");
 
     }
 
     public void g2_mostrarSucesionSignoDoWhile(){
 
-        System.out.println("Con DO WHILE:");
+        System.out.println("Con Do While: ");
+        int i = 1;
 
-        int j = 1;
         do{
+            int j = 1;
 
-            int i = 1;
             do{
+                if(j % 4 == 1)
+                    System.out.printf("+ ");
+                
+                if(j % 4 == 2)
+                    System.out.printf("- ");
+                
+                if(j % 4 == 3)
+                    System.out.printf("* ");
 
-                int posicion = (i-1) % 4;
-                // Determiné el signo a imprimir según la posición 
-                if (posicion == 0)
-                    System.out.print("+  ");
-                else if (posicion == 1)
-                    System.out.print("-  ");
-                else if (posicion == 2)
-                    System.out.print("*  ");
-                else
-                    System.out.print("/  ");
+                if(j % 4 == 0) //Division exacta!
+                    System.out.printf("/ ");
+                
+                j++;
+            }while(j<=4);
 
-                i++;
-            }while(i <= 4);
-
-            j++;
-        }while(j <= getRepeticion());
+            System.out.printf(" ");
+            i++;
+        }while(i<=getRepeticion());
 
         System.out.println("");
 
