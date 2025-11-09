@@ -12,7 +12,7 @@ public class SerieAlternante extends Variables {
         reset();
     }
 
-    public int Alternante() {
+    public int g2_Alternante() {
         for (int j = 1; j < getNumero(); j++) {
             if (j % 2 == 0) {
                 System.out.print(getCiclo()+" ");
@@ -25,7 +25,7 @@ public class SerieAlternante extends Variables {
     }
 
     
-    public int AlternanteWhile() {
+    public int g2_AlternanteWhile() {
         int j = 1;
         while (j < getNumero()) {
             if (j % 2 == 0) {
@@ -39,7 +39,7 @@ public class SerieAlternante extends Variables {
         return getAux();
     }
 
-    public int AlternanteDoWhile() {
+    public int g2_AlternanteDoWhile() {
         int j = 1;
         do {
             if (j % 2 == 0) {
@@ -53,20 +53,20 @@ public class SerieAlternante extends Variables {
         return getAux();
     }
 
-    public void imprimirAlternante() {
+    public void g2_imprimirAlternante() {
         reset();
         System.out.println("Serie Alternante (For):");
-        Alternante();
+        g2_Alternante();
     }
-    public void imprimirAlternanteWhile() {
+    public void g2_imprimirAlternanteWhile() {
         reset();
         System.out.println("Serie Alternante (While):");
-        AlternanteWhile();
+        g2_AlternanteWhile();
     }
 
-    public void imprimirAlternanteDoWhile() {
+    public void g2_imprimirAlternanteDoWhile() {
         reset();
         System.out.println("Serie Alternante (Do-While):");
-        AlternanteDoWhile();
+        g2_AlternanteDoWhile();
     }
 }

@@ -10,7 +10,7 @@ public class Serie3 extends Variables {
         super(numero);
         reset();
     }
-    public String Mas3() {
+    public String g2_Mas3() {
         String resultado = "";
         for (int i = 1; i <= getNumero(); i++) {
             resultado += getCiclo() + " ";
@@ -19,7 +19,7 @@ public class Serie3 extends Variables {
         return resultado;
     }
 
-    public String Mas3While() {
+    public String g2_Mas3While() {
         String resultado = "";
         int i = 1;
         while (i <= getNumero()) {
@@ -30,7 +30,7 @@ public class Serie3 extends Variables {
         return resultado;
     }
 
-    public String Mas3DoWhile() {
+    public String g2_Mas3DoWhile() {
         String resultado = "";
         int i = 1;
         do {
@@ -41,21 +41,21 @@ public class Serie3 extends Variables {
         return resultado;
     }
 
-    public void imprimirMas3() {
+    public void g2_imprimirMas3() {
         System.out.println("Serie +3 (For):");
         reset();
-        System.out.println(Mas3());
+        System.out.println(g2_Mas3());
     }
 
-    public void imprimirMas3While() {
+    public void g2_imprimirMas3While() {
         System.out.println("Serie +3 (While):");
         reset();
-        System.out.println(Mas3While());
+        System.out.println(g2_Mas3While());
     }
 
-    public void imprimirMas3DoWhile() {
+    public void g2_imprimirMas3DoWhile() {
         System.out.println("Serie +3 (Do-While):");
         reset();
-        System.out.println(Mas3DoWhile());
+        System.out.println(g2_Mas3DoWhile());
     }
 }

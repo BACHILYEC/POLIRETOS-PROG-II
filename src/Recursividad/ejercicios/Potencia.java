@@ -11,15 +11,15 @@ public class Potencia extends Variables {
         setSuma(1);
     }
 
-    public long potencia(){
+    public long g2_potencia(){
         if(getCiclo() <= Math.abs(getNumero2())){
           setSuma(getSuma() * getNumero());
             setCiclo(getCiclo() +1);
-            potencia();
+            g2_potencia();
         }
         return getSuma();
     }
-    public void mostrarPotencia(){
+    public void g2_mostrarPotencia(){
         System.out.println("Potencia: " + getSuma());
     }
 }

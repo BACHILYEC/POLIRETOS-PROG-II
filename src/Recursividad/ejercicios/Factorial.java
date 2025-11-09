@@ -10,17 +10,17 @@ public class Factorial extends Variables {
         setAux(0);
     }
 
-    public int factorial() {
+    public int g2_factorial() {
         if (getCiclo() <= Math.abs(getNumero())) {
             setAux(getCiclo() * getSuma());
             setCiclo(getCiclo() + 1);
             setSuma(getAux());
-            factorial();
+            g2_factorial();
         }
         return getAux();
     }
 
-    public void mostrarFactorial() {
+    public void g2_mostrarFactorial() {
         System.out.println("Factorial: " + getSuma());
     }
 }

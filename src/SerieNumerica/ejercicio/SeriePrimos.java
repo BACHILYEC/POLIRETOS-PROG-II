@@ -12,7 +12,7 @@ public class SeriePrimos extends Variables {
         reset();
     }
 
-    public String Primos() {
+    public String g2_Primos() {
         String resultado = "";
         for (int j = 0; j < getNumero(); ) {
             boolean esPrimo = true;
@@ -31,7 +31,7 @@ public class SeriePrimos extends Variables {
         return resultado;
     }
 
-    public String PrimosWhile() {
+    public String g2_PrimosWhile() {
         String resultado = "";
         int j = 0;
         while (j < getNumero()) {
@@ -51,7 +51,7 @@ public class SeriePrimos extends Variables {
         return resultado;
     }
 
-    public String PrimosDoWhile() {
+    public String g2_PrimosDoWhile() {
         String resultado = "";
         int j = 0;
         do {
@@ -71,22 +71,22 @@ public class SeriePrimos extends Variables {
         return resultado;
     }
 
-    // Métodos de impresión agrupados al final
-    public void imprimirPrimos() {
+
+    public void g2_imprimirPrimos() {
         System.out.println("Serie Primos (For):");
         reset();
-        System.out.println(Primos());
+        System.out.println(g2_Primos());
     }
 
-    public void imprimirPrimosWhile() {
+    public void g2_imprimirPrimosWhile() {
         System.out.println("Serie Primos (While):");
         reset();
-        System.out.println(PrimosWhile());
+        System.out.println(g2_PrimosWhile());
     }
 
-    public void imprimirPrimosDoWhile() {
+    public void g2_imprimirPrimosDoWhile() {
         System.out.println("Serie Primos (Do-While):");
         reset();
-        System.out.println(PrimosDoWhile());
+        System.out.println(g2_PrimosDoWhile());
     }
 }

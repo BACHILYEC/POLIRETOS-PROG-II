@@ -10,7 +10,7 @@ public class Serie5 extends Variables {
         super(numero);
         reset();
     }
-    public String mas5() {
+    public String g2_mas5() {
         String resultado = "";
         for (int i = 1; i <= getNumero(); i++) {
             resultado += getCiclo() + " ";
@@ -19,7 +19,7 @@ public class Serie5 extends Variables {
         return resultado;
     }
 
-    public String Mas5While() {
+    public String g2_Mas5While() {
         String resultado = "";
         int i = 1;
         while (i <= getNumero()) {
@@ -30,7 +30,7 @@ public class Serie5 extends Variables {
         return resultado;
     }
 
-    public String Mas5DoWhile() {
+    public String g2_Mas5DoWhile() {
         String resultado = "";
         int i = 1;
         do {
@@ -41,21 +41,21 @@ public class Serie5 extends Variables {
         return resultado;
     }
 
-    public void imprimirMas5() {
+    public void g2_imprimirMas5() {
         System.out.println("Serie +5 (For):");
         reset();
-        System.out.println(mas5());
+        System.out.println(g2_mas5());
     }
 
-    public void imprimirMas5While() {
+    public void g2_imprimirMas5While() {
         System.out.println("Serie +5 (While):");
         reset();
-        System.out.println(Mas5While());
+        System.out.println(g2_Mas5While());
     }
 
-    public void imprimirMas5DoWhile() {
+    public void g2_imprimirMas5DoWhile() {
         System.out.println("Serie +5 (Do-While):");
         reset();
-        System.out.println(Mas5DoWhile());
+        System.out.println(g2_Mas5DoWhile());
     }
 }

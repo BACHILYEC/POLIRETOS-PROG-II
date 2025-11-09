@@ -10,7 +10,7 @@ public class ConteoProg extends Variables {
         setCiclo(0);
     }
 
-    public void conteoProg() {
+    public void g2_conteoProg() {
        if(getCiclo() <= getNumero()){
         if(getCiclo() != getNumero()){
         System.out.print(getCiclo() + "-");
@@ -18,7 +18,7 @@ public class ConteoProg extends Variables {
         else
         System.out.println(getCiclo());
            setCiclo(getCiclo() +1);
-           conteoProg();
+           g2_conteoProg();
        
     }
 }

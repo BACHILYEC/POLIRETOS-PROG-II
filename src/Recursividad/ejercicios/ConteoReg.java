@@ -7,7 +7,7 @@ public class ConteoReg extends Variables {
         super(Math.abs(numero));
         this.setCiclo(0);
     }
-    public void conteoReg(){
+    public void g2_conteoReg(){
         if(getCiclo() <= getNumero()){
             if(getCiclo() != getNumero()){
             System.out.print(getNumero()+ "-");
@@ -15,7 +15,7 @@ public class ConteoReg extends Variables {
             else
             System.out.println(getNumero());
             setNumero(getNumero()-1);    
-            conteoReg();    
+            g2_conteoReg();    
     }
     
 

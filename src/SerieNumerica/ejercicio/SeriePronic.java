@@ -11,7 +11,7 @@ public class SeriePronic extends Variables {
         reset();
     }
 
-    public String Pronic() {
+    public String g2_Pronic() {
         String resultado = "";
         for (int j = 0; j < getNumero(); j++) {
             resultado += (getCiclo() * (getCiclo() + 1)) + " ";
@@ -20,7 +20,7 @@ public class SeriePronic extends Variables {
         return resultado;
     }
 
-    public String PronicWhile() {
+    public String g2_PronicWhile() {
         String resultado = "";
         int j = 0;
         while (j < getNumero()) {
@@ -31,7 +31,7 @@ public class SeriePronic extends Variables {
         return resultado;
     }
 
-    public String PronicDoWhile() {
+    public String g2_PronicDoWhile() {
         String resultado = "";
         int j = 0;
         do {
@@ -42,21 +42,21 @@ public class SeriePronic extends Variables {
         return resultado;
     }
 
-    public void imprimirPronic() {
+    public void g2_imprimirPronic() {
         System.out.println("Serie Pronic (For):");
         reset();
-        System.out.println(Pronic());
+        System.out.println(g2_Pronic());
     }
 
-    public void imprimirPronicWhile() {
+    public void g2_imprimirPronicWhile() {
         System.out.println("Serie Pronic (While):");
         reset();
-        System.out.println(PronicWhile());
+        System.out.println(g2_PronicWhile());
     }
 
-    public void imprimirPronicDoWhile() {
+    public void g2_imprimirPronicDoWhile() {
         System.out.println("Serie Pronic (Do-While):");
         reset();
-        System.out.println(PronicDoWhile());
+        System.out.println(g2_PronicDoWhile());
     }
 }

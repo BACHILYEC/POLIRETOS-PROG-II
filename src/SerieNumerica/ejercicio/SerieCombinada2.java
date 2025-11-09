@@ -13,7 +13,7 @@ public class SerieCombinada2 extends Variables {
         reset();
     }
 
-    public String Combinada2() {
+    public String g2_Combinada2() {
         String resultado = "";
         for (int j = 0; j < getNumero(); j++) {
             if (j == 0) {
@@ -31,7 +31,7 @@ public class SerieCombinada2 extends Variables {
         return resultado;
     }
 
-    public String Combinada2While() {
+    public String g2_Combinada2While() {
         String resultado = "";
         int j = 0;
         while (j < getNumero()) {
@@ -51,7 +51,7 @@ public class SerieCombinada2 extends Variables {
         return resultado;
     }
 
-    public String Combinada2DoWhile() {
+    public String g2_Combinada2DoWhile() {
         String resultado = "";
         int j = 0;
         do {
@@ -71,19 +71,19 @@ public class SerieCombinada2 extends Variables {
         return resultado;
     }
 
-    // Métodos de impresión agrupados al final
-    public void imprimirCombinada() {
+   
+    public void g2_imprimirCombinada() {
         reset();
-        System.out.println("Serie Combinada2 (For):\n" + Combinada2());
+        System.out.println("Serie Combinada2 (For):\n" + g2_Combinada2());
     }
 
-    public void imprimirCombinadaWhile() {
+    public void g2_imprimirCombinadaWhile() {
         reset();
-        System.out.println("Serie Combinada2 (While):\n" + Combinada2While());
+        System.out.println("Serie Combinada2 (While):\n" + g2_Combinada2While());
     }
 
-    public void imprimirCombinadaDoWhile() {
+    public void g2_imprimirCombinadaDoWhile() {
         reset();
-        System.out.println("Serie Combinada2 (Do-While):\n" + Combinada2DoWhile());
+        System.out.println("Serie Combinada2 (Do-While):\n" + g2_Combinada2DoWhile());
     }
 }

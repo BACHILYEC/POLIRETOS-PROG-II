@@ -12,7 +12,7 @@ public class SerieCuadrados extends Variables {
         reset();
     }
 
-    public String Cuadrados() {
+    public String g2_Cuadrados() {
         String resultado = "";
         for (int i = 1; i <= getNumero(); i++) {
             resultado += (i * i) + " ";
@@ -20,7 +20,7 @@ public class SerieCuadrados extends Variables {
         return resultado;
     }
 
-    public String CuadradosWhile() {
+    public String g2_CuadradosWhile() {
         String resultado = "";
         int i = 1;
         while (i <= getNumero()) {
@@ -30,7 +30,7 @@ public class SerieCuadrados extends Variables {
         return resultado;
     }
 
-    public String CuadradosDoWhile() {
+    public String g2_CuadradosDoWhile() {
         String resultado = "";
         int i = 1;
         do {
@@ -40,21 +40,21 @@ public class SerieCuadrados extends Variables {
         return resultado;
     }
 
-    public void imprimirCuadrados() {
+    public void g2_imprimirCuadrados() {
         System.out.println("Serie Cuadrados (For):");
         reset();
-        System.out.println(Cuadrados());
+        System.out.println(g2_Cuadrados());
     }
 
-    public void imprimirCuadradosWhile() {
+    public void g2_imprimirCuadradosWhile() {
         System.out.println("Serie Cuadrados (While):");
         reset();
-        System.out.println(CuadradosWhile());
+        System.out.println(g2_CuadradosWhile());
     }
 
-    public void imprimirCuadradosDoWhile() {
+    public void g2_imprimirCuadradosDoWhile() {
         System.out.println("Serie Cuadrados (Do-While):");
         reset();
-        System.out.println(CuadradosDoWhile());
+        System.out.println(g2_CuadradosDoWhile());
     }
 }

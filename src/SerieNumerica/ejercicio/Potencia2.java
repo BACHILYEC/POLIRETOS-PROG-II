@@ -10,7 +10,7 @@ public class Potencia2 extends Variables {
         super(numero);
         reset();
     }
-    public void Potencia() {
+    public void g2_Potencia() {
         System.out.println("Serie Potencia de 2 (For):");
         for(int i = 0; i < getNumero(); i++) {
             System.out.print(getCiclo()+" ");
@@ -18,7 +18,7 @@ public class Potencia2 extends Variables {
         }
     }
 
-    public void PotenciaWhile() {
+    public void g2_PotenciaWhile() {
         System.out.println("Serie Potencia de 2 (While):");
         int i = 0;
         while(i < getNumero()) {
@@ -28,7 +28,7 @@ public class Potencia2 extends Variables {
         }
     }
 
-    public void PotenciaDoWhile() {
+    public void g2_PotenciaDoWhile() {
         System.out.println("Serie Potencia de 2 (Do-While):");
         int i = 0;
         do {
@@ -38,21 +38,21 @@ public class Potencia2 extends Variables {
         } while(i < getNumero());
     }
 
-    public void imprimirPotencia() {
+    public void g2_imprimirPotencia() {
         reset();
-        Potencia();
+        g2_Potencia();
         System.out.println();
     }
 
-    public void imprimirPotenciaWhile() {
+    public void g2_imprimirPotenciaWhile() {
         reset();
-        PotenciaWhile();
+        g2_PotenciaWhile();
         System.out.println();
     }
 
-    public void imprimirPotenciaDoWhile() {
+    public void g2_imprimirPotenciaDoWhile() {
         reset();
-        PotenciaDoWhile();
+        g2_PotenciaDoWhile();
         System.out.println();
     }
 }

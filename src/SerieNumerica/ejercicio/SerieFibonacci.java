@@ -13,7 +13,7 @@ public class SerieFibonacci extends Variables {
         reset();
     }
 
-    public int Fibonacci() {
+    public int g2_Fibonacci() {
         for (int j = 0; j < getNumero(); j++) {
             if (j == 0) {
                 System.out.print(getCiclo() + " ");
@@ -29,7 +29,7 @@ public class SerieFibonacci extends Variables {
         return getSuma();
     }
 
-    public int FibonacciWhile() {
+    public int g2_FibonacciWhile() {
         int j = 0;
         while (j < getNumero()) {
             if (j == 0) {
@@ -47,7 +47,7 @@ public class SerieFibonacci extends Variables {
         return getSuma();
     }
 
-    public int FibonacciDoWhile() {
+    public int g2_FibonacciDoWhile() {
         int j = 0;
         do {
             if (j == 0) {
@@ -65,25 +65,26 @@ public class SerieFibonacci extends Variables {
         return getSuma();
     }
 
-    // Métodos de impresión agrupados al final
-    public void imprimirFibonacci() {
+    
+    public void g2_imprimirFibonacci() {
         System.out.println("Serie Fibonacci (For):");
         reset();
-        Fibonacci();
+        g2_Fibonacci();
         System.out.println();
     }
 
-    public void imprimirFibonacciWhile() {
+        
+    public void g2_imprimirFibonacciWhile() {
         System.out.println("Serie Fibonacci (While):");
         reset();
-        FibonacciWhile();
+        g2_FibonacciWhile();
         System.out.println();
     }
 
-    public void imprimirFibonacciDoWhile() {
+    public void g2_imprimirFibonacciDoWhile() {
         System.out.println("Serie Fibonacci (Do-While):");
         reset();
-        FibonacciDoWhile();
+        g2_FibonacciDoWhile();
         System.out.println();
     }
 }

@@ -10,11 +10,11 @@ public class Multiplicacion extends Variables {
         setSuma(0);
     }
 
-    public int multiplicacion() {
+    public int g2_multiplicacion() {
         if (getCiclo() <= Math.abs(getNumero2())) {
             setSuma(getSuma() + Math.abs(getNumero()));
             setCiclo(getCiclo() + 1);
-            multiplicacion();
+            g2_multiplicacion();
         }
         else{
         if (getNumero() == 0 || getNumero2() == 0) {
@@ -28,7 +28,7 @@ public class Multiplicacion extends Variables {
         return getSuma();
     }
 
-    public void mostrarMultiplicacion() {
+    public void g2_mostrarMultiplicacion() {
         System.out.println("Multiplicacion: " + getSuma());
     }
 }

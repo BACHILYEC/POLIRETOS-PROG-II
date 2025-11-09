@@ -10,18 +10,18 @@ public class Suma extends Variables {
         this.setSuma(1);
     }
 
-    public int suma() {
+    public int g2_suma() {
         int resultado = this.getSuma();
         if (this.getCiclo() <= this.getNumero2()) {
             this.setNumero(this.getNumero() + 1);
             this.setSuma(this.getNumero());
             this.setNumero2(this.getNumero2() - 1);
-            suma();
+            g2_suma();
         }
         return resultado;
     }
 
-    public void mostrarSuma() {
+    public void g2_mostrarSuma() {
         System.out.println("Suma: " + this.getSuma());
     }
 }
