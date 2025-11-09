@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package Recursividad.ejercicios;
 
 import Recursividad.Variables;
@@ -25,3 +26,32 @@ public class Suma extends Variables {
         System.out.println("Suma: " + this.getSuma());
     }
 }
+=======
+package Recursividad.ejercicios;
+
+import Recursividad.Variables;
+
+public class Suma extends Variables {
+
+    public Suma(int numero, int numero2) {
+        super(numero, numero2);
+        this.setCiclo(1);
+        this.setSuma(1);
+    }
+
+    public int g2_suma() {
+        int resultado = this.getSuma();
+        if (this.getCiclo() <= this.getNumero2()) {
+            this.setNumero(this.getNumero() + 1);
+            this.setSuma(this.getNumero());
+            this.setNumero2(this.getNumero2() - 1);
+            g2_suma();
+        }
+        return resultado;
+    }
+
+    public void g2_mostrarSuma() {
+        System.out.println("Suma: " + this.getSuma());
+    }
+}
+>>>>>>> main

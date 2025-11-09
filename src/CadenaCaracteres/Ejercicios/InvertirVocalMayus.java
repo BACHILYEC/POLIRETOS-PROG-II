@@ -1,9 +1,16 @@
 package CadenaCaracteres.Ejercicios;
 
+<<<<<<< HEAD
 import CadenaCaracteres.VariableCadena;
 
 
 public class InvertirVocalMayus extends VariableCadena{
+=======
+import Recursividad.Variables;
+
+
+public class InvertirVocalMayus extends Variables{
+>>>>>>> main
 
     public String usandoFor(String texto) {
         StringBuilder salida = new StringBuilder();

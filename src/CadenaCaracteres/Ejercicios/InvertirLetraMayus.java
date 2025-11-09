@@ -1,8 +1,14 @@
 package CadenaCaracteres.Ejercicios;
 
+<<<<<<< HEAD
 import CadenaCaracteres.VariableCadena;
 
 public class InvertirLetraMayus extends VariableCadena{
+=======
+import Recursividad.Variables;
+
+public class InvertirLetraMayus extends Variables{
+>>>>>>> main
 
     public String usandoFor(String texto) {
         StringBuilder resultado = new StringBuilder();

@@ -1,9 +1,16 @@
 package CadenaCaracteres.Ejercicios;
 
+<<<<<<< HEAD
 import CadenaCaracteres.VariableCadena;
 import java.util.Random;
 
 public class FromarAnagrama extends VariableCadena {
+=======
+import Recursividad.Variables;
+import java.util.Random;
+
+public class FromarAnagrama extends Variables {
+>>>>>>> main
 
     private final String[][] conjunto = {
         {"pera", "arep"},

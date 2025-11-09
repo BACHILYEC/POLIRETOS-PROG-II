@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package Recursividad.ejercicios;
 
 import Recursividad.Variables;
@@ -23,3 +24,30 @@ public class ConteoProg extends Variables {
     }
 }
 }
+=======
+package Recursividad.ejercicios;
+
+import Recursividad.Variables;
+
+public class ConteoProg extends Variables {
+
+
+    public ConteoProg(int numero) {
+        super(Math.abs(numero));
+        setCiclo(0);
+    }
+
+    public void g2_conteoProg() {
+       if(getCiclo() <= getNumero()){
+        if(getCiclo() != getNumero()){
+        System.out.print(getCiclo() + "-");
+        }
+        else
+        System.out.println(getCiclo());
+           setCiclo(getCiclo() +1);
+           g2_conteoProg();
+       
+    }
+}
+}
+>>>>>>> main

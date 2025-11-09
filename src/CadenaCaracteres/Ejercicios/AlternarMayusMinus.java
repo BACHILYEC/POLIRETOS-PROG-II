@@ -1,9 +1,16 @@
 package CadenaCaracteres.Ejercicios; // ← Asegúrate que coincida con tu carpeta exacta
 
+<<<<<<< HEAD
 import CadenaCaracteres.VariableCadena;
 
 
 public class AlternarMayusMinus extends VariableCadena{
+=======
+import Recursividad.Variables;
+
+
+public class AlternarMayusMinus extends Variables{
+>>>>>>> main
 
     public String usandoFor(String texto) {
         StringBuilder salida = new StringBuilder();

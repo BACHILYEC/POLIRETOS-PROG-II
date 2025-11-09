@@ -1,8 +1,14 @@
 package CadenaCaracteres.Ejercicios;
 
+<<<<<<< HEAD
 import CadenaCaracteres.VariableCadena;
 
 public class MayusSinJ extends VariableCadena{
+=======
+import Recursividad.Variables;
+
+public class MayusSinJ extends Variables{
+>>>>>>> main
 
     public String usandoFor(String texto) {
         return texto.toUpperCase().replace("J", "");

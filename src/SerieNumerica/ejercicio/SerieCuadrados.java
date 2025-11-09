@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package SerieNumerica.ejercicio;
 
 import Recursividad.Variables;
@@ -57,4 +58,65 @@ public class SerieCuadrados extends Variables {
         reset();
         System.out.println(CuadradosDoWhile());
     }
+=======
+package SerieNumerica.ejercicio;
+
+import Recursividad.Variables;
+
+public class SerieCuadrados extends Variables {
+    public void reset() {
+        setCiclo(1);
+    }
+
+    public SerieCuadrados(int numero) {
+        super(numero);
+        reset();
+    }
+
+    public String g2_Cuadrados() {
+        String resultado = "";
+        for (int i = 1; i <= getNumero(); i++) {
+            resultado += (i * i) + " ";
+        }
+        return resultado;
+    }
+
+    public String g2_CuadradosWhile() {
+        String resultado = "";
+        int i = 1;
+        while (i <= getNumero()) {
+            resultado += (i * i) + " ";
+            i++;
+        }
+        return resultado;
+    }
+
+    public String g2_CuadradosDoWhile() {
+        String resultado = "";
+        int i = 1;
+        do {
+            resultado += (i * i) + " ";
+            i++;
+        } while (i <= getNumero());
+        return resultado;
+    }
+
+    public void g2_imprimirCuadrados() {
+        System.out.println("Serie Cuadrados (For):");
+        reset();
+        System.out.println(g2_Cuadrados());
+    }
+
+    public void g2_imprimirCuadradosWhile() {
+        System.out.println("Serie Cuadrados (While):");
+        reset();
+        System.out.println(g2_CuadradosWhile());
+    }
+
+    public void g2_imprimirCuadradosDoWhile() {
+        System.out.println("Serie Cuadrados (Do-While):");
+        reset();
+        System.out.println(g2_CuadradosDoWhile());
+    }
+>>>>>>> main
 }

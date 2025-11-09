@@ -1,8 +1,15 @@
 package CadenaCaracteres.Ejercicios;
 
+<<<<<<< HEAD
 import CadenaCaracteres.VariableCadena;
 
 public class EliminarLetra extends VariableCadena{
+=======
+
+import Recursividad.Variables;
+
+public class EliminarLetra extends Variables{
+>>>>>>> main
 
     // Método usando for
     public String usandoFor(String texto) {

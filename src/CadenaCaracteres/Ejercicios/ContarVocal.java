@@ -1,8 +1,14 @@
 package CadenaCaracteres.Ejercicios;
 
+<<<<<<< HEAD
 import CadenaCaracteres.VariableCadena;
 
 public class ContarVocal extends VariableCadena{
+=======
+import Recursividad.Variables;
+
+public class ContarVocal extends Variables{
+>>>>>>> main
 
     public String usandoFor(String texto) {
         int contador = 0;
