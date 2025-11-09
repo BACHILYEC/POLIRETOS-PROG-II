@@ -1,0 +1,89 @@
+package SerieNumerica.ejercicio;
+
+import Recursividad.Variables;
+
+public class SerieFibonacci extends Variables {
+    public void reset(){
+        setCiclo(0);
+        setAux(1);
+        setSuma(0);
+    }
+    public SerieFibonacci(int numero) {
+        super(numero);
+        reset();
+    }
+
+    public int Fibonacci() {
+        for (int j = 0; j < getNumero(); j++) {
+            if (j == 0) {
+                System.out.print(getCiclo() + " ");
+            } else if (j == 1) {
+                System.out.print(getAux() + " ");
+            } else {
+                setSuma(getCiclo() + getAux());
+                setCiclo(getAux());
+                setAux(getSuma());
+                System.out.print(getSuma() + " ");
+            }
+        }
+        return getSuma();
+    }
+
+    public int FibonacciWhile() {
+        int j = 0;
+        while (j < getNumero()) {
+            if (j == 0) {
+                System.out.print(getCiclo() + " ");
+            } else if (j == 1) {
+                System.out.print(getAux() + " ");
+            } else {
+                setSuma(getCiclo() + getAux());
+                setCiclo(getAux());
+                setAux(getSuma());
+                System.out.print(getSuma() + " ");
+            }
+            j++;
+        }
+        return getSuma();
+    }
+
+    public int FibonacciDoWhile() {
+        int j = 0;
+        do {
+            if (j == 0) {
+                System.out.print(getCiclo() + " ");
+            } else if (j == 1) {
+                System.out.print(getAux() + " ");
+            } else {
+                setSuma(getCiclo() + getAux());
+                setCiclo(getAux());
+                setAux(getSuma());
+                System.out.print(getSuma() + " ");
+            }
+            j++;
+        } while (j < getNumero());
+        return getSuma();
+    }
+
+    // Métodos de impresión agrupados al final
+    public void imprimirFibonacci() {
+        System.out.println("Serie Fibonacci (For):");
+        reset();
+        Fibonacci();
+        System.out.println();
+    }
+
+    public void imprimirFibonacciWhile() {
+        System.out.println("Serie Fibonacci (While):");
+        reset();
+        FibonacciWhile();
+        System.out.println();
+    }
+
+    public void imprimirFibonacciDoWhile() {
+        System.out.println("Serie Fibonacci (Do-While):");
+        reset();
+        FibonacciDoWhile();
+        System.out.println();
+    }
+}
