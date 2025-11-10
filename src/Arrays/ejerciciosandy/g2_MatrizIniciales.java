@@ -2,7 +2,7 @@ package Arrays.ejerciciosandy;
 
 import Arrays.Variablesandy;
 
-public class MatrizIniciales {
+public class g2_MatrizIniciales {
 
     // ========================= MÉTODO CON FOR =========================
     public static void dibujarConFor(Variablesandy d, String iniciales) {

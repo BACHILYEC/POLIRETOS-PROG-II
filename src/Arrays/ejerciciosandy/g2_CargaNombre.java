@@ -2,7 +2,7 @@ package Arrays.ejerciciosandy;
 
 import Arrays.Variablesandy;
 
-public class CargaNombre {
+public class g2_CargaNombre {
 
     public void ejecutar() {
         Variablesandy datos = new Variablesandy();

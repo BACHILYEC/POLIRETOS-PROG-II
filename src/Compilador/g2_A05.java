@@ -2,7 +2,7 @@ package Compilador;
 
 import java.util.Scanner;
 
-public class A05 {
+public class g2_A05 {
 
     public static boolean validarVariable(String variable) {
         variable = variable.trim();

@@ -2,7 +2,7 @@ package Arrays.ejerciciosandy;
 
 import Arrays.Variablesandy;
 
-public class MatrizX {
+public class g2_MatrizX {
 
     public static void main(String[] args) {
         Variablesandy datos = new Variablesandy();

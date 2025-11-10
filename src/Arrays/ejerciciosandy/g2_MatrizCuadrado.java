@@ -3,7 +3,7 @@ package Arrays.ejerciciosandy;
 import Arrays.Variablesandy;
 import java.util.Random;
 
-public class MatrizCuadrado {
+public class g2_MatrizCuadrado {
 
     public static void main(String[] args) {
         Variablesandy datos = new Variablesandy();

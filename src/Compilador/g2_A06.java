@@ -1,8 +1,8 @@
-package Compiladores;
+package Compilador;
 
 import java.util.Scanner;
 
-public class A06 {
+public class g2_A06 {
 
     private static final String[] PALABRAS_VALIDAS = {"for", "if", "else", "ifelse", "foreach"};
 
