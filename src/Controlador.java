@@ -104,11 +104,11 @@ public class Controlador extends Variables {
 
         System.out.println(ANSI_BLUE + "              Programacion II              " + ANSI_RESET);
         System.out.println();
-        System.out.println(ANSI_BLUE + "Adrian Muñoz");
-        System.out.println("Mathias Bucheli");
-        System.out.println("Angela Cevallos");
-        System.out.println("Heidy Cruz");
-        System.out.println("Ismael Heredia" + ANSI_RESET);
+        System.out.println(ANSI_BLUE + "Muñoz Adrian");
+        System.out.println("Bucheli Mathias");
+        System.out.println("Cevallos Angela");
+        System.out.println("Cruz Heidy");
+        System.out.println("Heredia Ismael" + ANSI_RESET);
         System.out.println();
         System.out.println(ANSI_RED + "               PoliRetos                   ");
         System.out.println("===========================================" + ANSI_RESET);
@@ -241,12 +241,9 @@ public class Controlador extends Variables {
         ejercicio10.mostrarSucesiondeLetraFibonacciDosWhile();
         ejercicio10.mostrarSucesiondeLetraFibonacciDosDoWhile();
 
-        System.out.println("Figuras:");
-        System.out.println("");
         System.out.println("--------FIGURAS--------");
         System.out.println("Figuras:");
         System.out.println("");
-        System.out.println("--------FIGURAS--------");
         System.out.print("Ingrese el numero de niveles para las figuras: ");
         setNivel(sc.nextInt());
         Figura1 figura01 = new Figura1(getNivel());
@@ -384,7 +381,7 @@ public class Controlador extends Variables {
         System.out.println("Loadings:");
         System.out.println("");
         System.out.println("--------CARGAS--------");
-        Carga carga = new Carga(10);
+        Carga carga = new Carga(100);
         System.out.println("Carga 1: ");
         carga.g2_cargar1();
         System.out.println("\nCarga 2: ");
@@ -420,7 +417,7 @@ public class Controlador extends Variables {
         suma.g2_suma();
         suma.g2_mostrarSuma();
         Multiplicacion multiplicacion = new Multiplicacion(numero1, numero2);
-        multiplicacion.g2_mostrarMultiplicacion();
+        multiplicacion.g2_multiplicacion();
         multiplicacion.g2_mostrarMultiplicacion();
         Potencia potencia = new Potencia(numero1, numero2);
         potencia.g2_potencia();
@@ -458,6 +455,7 @@ public class Controlador extends Variables {
         System.out.println("Compilador de variables");
         A05 compilador = new A05();
         compilador.imprimir();
+
         System.out.println("Validar numero decimal");
         A05a numerodecimal = new A05a();
         numerodecimal.g2_decimal();
@@ -466,8 +464,11 @@ public class Controlador extends Variables {
         A06 compilador1 = new A06();
         compilador1.imprimir();
         System.out.println("Validor de Clave");
+        Scanner sc1 = new Scanner(System.in);
         A07 validador = new A07();
-        validador.ejecutar(sc);
+        validador.ejecutar(sc1);
+        sc.close();
 
     }
+
 }

@@ -19,10 +19,9 @@ public class A06 {
         }
         return false;
     }
-
+Scanner sc = new Scanner(System.in);
     public void imprimir() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("COMPILADOR DE LENGUAJE L");
+        
         System.out.println("Lenguaje L = {for, if, else, ifelse, foreach}");
         System.out.println("Ingresa una palabra o estructura a validar:");
 
@@ -34,6 +33,5 @@ public class A06 {
             System.out.println("Error");
         }
 
-        sc.close();
     }
 }

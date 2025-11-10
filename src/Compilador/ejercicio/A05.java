@@ -17,10 +17,9 @@ public class A05 {
 
         return variable.matches("^[a-zA-Z_$][a-zA-Z0-9_$]*$");
     }
-
+Scanner sc = new Scanner(System.in);
     public void imprimir() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("COMPILADOR DE VARIABLES");
+        
         System.out.println("Ingresa una posible declaración (ej: edad; edad1; _nombre; $dato;):");
 
         String entrada = sc.nextLine();
@@ -31,6 +30,5 @@ public class A05 {
             System.out.println("Error");
         }
 
-        sc.close();
     }
 }

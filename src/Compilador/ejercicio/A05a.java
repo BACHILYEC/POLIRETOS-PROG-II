@@ -9,9 +9,10 @@ public class A05a {
     
   }
 
-  Scanner sc = new Scanner(System.in);
+  
 
   public void g2_decimal() {
+    Scanner sc = new Scanner(System.in);
     System.out.print("Ingrese un numero decimal: ");
     numeroDecimal = sc.nextLine();
     Boolean esnumero = true;
