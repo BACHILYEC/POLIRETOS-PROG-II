@@ -3,10 +3,10 @@ package CadenaCaracteres.Ejercicios;
 
 import Recursividad.Variables;
 
-public class EliminarLetra extends Variables{
+public class EliminadorDeLetra extends Variables{
 
-    // Método usando for
-    public String usandoFor(String texto) {
+    
+    public String g2_usandoFor(String texto) {
         char letra = 'a'; 
         StringBuilder resultado = new StringBuilder();
 
@@ -20,8 +20,7 @@ public class EliminarLetra extends Variables{
         return "Frase sin '" + letra + "': " + resultado.toString();
     }
 
-    // Método usando while
-    public String usandoWhile(String texto) {
+    public String g2_usandoWhile(String texto) {
         char letra = 'a';
         StringBuilder resultado = new StringBuilder();
         int i = 0;
@@ -37,8 +36,7 @@ public class EliminarLetra extends Variables{
         return "Frase sin '" + letra + "': " + resultado.toString();
     }
 
-    // Método usando do-while
-    public String usandoDoWhile(String texto) {
+    public String g2_usandoDoWhile(String texto) {
         if (texto.isEmpty()) return "Frase vacía.";
         char letra = 'a';
         StringBuilder resultado = new StringBuilder();

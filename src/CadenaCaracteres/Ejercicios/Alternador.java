@@ -3,7 +3,7 @@ package CadenaCaracteres.Ejercicios; // ← Asegúrate que coincida con tu carpe
 import Recursividad.Variables;
 
 
-public class AlternarMayusMinus extends Variables{
+public class Alternador extends Variables{
 
     public String g2_usandoFor(String texto) {
         StringBuilder salida = new StringBuilder();

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class A05 {
 
-    public static boolean validarVariable(String variable) {
+    public static boolean g2_validarVariable(String variable) {
         variable = variable.trim();
 
         if (variable.endsWith(";")) {
@@ -18,14 +18,14 @@ public class A05 {
         return variable.matches("^[a-zA-Z_$][a-zA-Z0-9_$]*$");
     }
 
-    public static void main(String[] args) {
+    public void imprimir() {
         Scanner sc = new Scanner(System.in);
         System.out.println("COMPILADOR DE VARIABLES");
         System.out.println("Ingresa una posible declaración (ej: edad; edad1; _nombre; $dato;):");
 
         String entrada = sc.nextLine();
 
-        if (validarVariable(entrada)) {
+        if (g2_validarVariable(entrada)) {
             System.out.println("Variable válida");
         } else {
             System.out.println("Error");

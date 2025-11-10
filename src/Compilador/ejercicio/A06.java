@@ -6,7 +6,7 @@ public class A06 {
 
     private static final String[] PALABRAS_VALIDAS = {"for", "if", "else", "ifelse", "foreach"};
 
-    public static boolean validarEstructura(String entrada) {
+    public static boolean g2_validarEstructura(String entrada) {
         entrada = entrada.trim();
 
         for (String palabra : PALABRAS_VALIDAS) {
@@ -20,7 +20,7 @@ public class A06 {
         return false;
     }
 
-    public static void main(String[] args) {
+    public void imprimir() {
         Scanner sc = new Scanner(System.in);
         System.out.println("COMPILADOR DE LENGUAJE L");
         System.out.println("Lenguaje L = {for, if, else, ifelse, foreach}");
@@ -28,7 +28,7 @@ public class A06 {
 
         String entrada = sc.nextLine();
 
-        if (validarEstructura(entrada)) {
+        if (g2_validarEstructura(entrada)) {
             System.out.println("Estructura válida del lenguaje L");
         } else {
             System.out.println("Error");

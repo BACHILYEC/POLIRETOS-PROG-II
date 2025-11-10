@@ -3,7 +3,7 @@ package CadenaCaracteres.Ejercicios;
 import Recursividad.Variables;
 import java.util.Random;
 
-public class FromarAnagrama extends Variables {
+public class FormadorDeAnagrama extends Variables {
 
     private final String[][] conjunto = {
         {"pera", "arep"},
@@ -18,19 +18,19 @@ public class FromarAnagrama extends Variables {
         {"sopa", "asop"}
     };
 
-    public String usandoFor(String texto) {
-        return generarAnagrama("for");
+    public String g2_usandoFor(String texto) {
+        return g2_generarAnagrama("for");
     }
 
-    public String usandoWhile(String texto) {
-        return generarAnagrama("while");
+    public String g2_usandoWhile(String texto) {
+        return g2_generarAnagrama("while");
     }
 
-    public String usandoDoWhile(String texto) {
-        return generarAnagrama("do-while");
+    public String g2_usandoDoWhile(String texto) {
+        return g2_generarAnagrama("do-while");
     }
 
-    private String generarAnagrama(String tipo) {
+    private String g2_generarAnagrama(String tipo) {
         Random rnd = new Random();
         String[] par = conjunto[rnd.nextInt(conjunto.length)];
         String palabra = par[0];
