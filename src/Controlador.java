@@ -454,7 +454,7 @@ public class Controlador extends Variables {
 
         System.out.println("Compilador de variables");
         A05 compilador = new A05();
-        compilador.imprimir();
+        compilador.g2_imprimir();
 
         System.out.println("Validar numero decimal");
         A05a numerodecimal = new A05a();
@@ -462,7 +462,7 @@ public class Controlador extends Variables {
 
         System.out.println("Validador de Bucle");
         A06 compilador1 = new A06();
-        compilador1.imprimir();
+        compilador1.g2_imprimir();
         System.out.println("Validor de Clave");
         Scanner sc1 = new Scanner(System.in);
         A07 validador = new A07();

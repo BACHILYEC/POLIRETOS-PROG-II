@@ -18,7 +18,7 @@ public class A05 {
         return variable.matches("^[a-zA-Z_$][a-zA-Z0-9_$]*$");
     }
 Scanner sc = new Scanner(System.in);
-    public void imprimir() {
+    public void g2_imprimir() {
         
         System.out.println("Ingresa una posible declaración (ej: edad; edad1; _nombre; $dato;):");
 

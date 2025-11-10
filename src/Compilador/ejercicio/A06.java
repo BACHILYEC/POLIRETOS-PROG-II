@@ -20,7 +20,7 @@ public class A06 {
         return false;
     }
 Scanner sc = new Scanner(System.in);
-    public void imprimir() {
+    public void g2_imprimir() {
         
         System.out.println("Lenguaje L = {for, if, else, ifelse, foreach}");
         System.out.println("Ingresa una palabra o estructura a validar:");
