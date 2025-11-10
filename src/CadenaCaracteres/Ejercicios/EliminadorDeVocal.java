@@ -2,9 +2,9 @@ package CadenaCaracteres.Ejercicios;
 
 import Recursividad.Variables;
 
-public class EliminarVocal extends Variables{
+public class EliminadorDeVocal extends Variables{
 
-    public String usandoFor(String texto) {
+    public String g2_usandoFor(String texto) {
         StringBuilder salida = new StringBuilder();
         String vocales = "aeiouAEIOU";
         for (int i = 0; i < texto.length(); i++)
@@ -12,7 +12,7 @@ public class EliminarVocal extends Variables{
         return salida.toString();
     }
 
-    public String usandoWhile(String texto) {
+    public String g2_usandoWhile(String texto) {
         StringBuilder salida = new StringBuilder();
         String vocales = "aeiouAEIOU";
         int i = 0;
@@ -23,7 +23,7 @@ public class EliminarVocal extends Variables{
         return salida.toString();
     }
 
-    public String usandoDoWhile(String texto) {
+    public String g2_usandoDoWhile(String texto) {
         if (texto.isEmpty()) return "";
         StringBuilder salida = new StringBuilder();
         String vocales = "aeiouAEIOU";

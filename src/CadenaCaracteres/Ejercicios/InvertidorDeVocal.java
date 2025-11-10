@@ -3,9 +3,9 @@ package CadenaCaracteres.Ejercicios;
 import Recursividad.Variables;
 
 
-public class InvertirVocalMayus extends Variables{
+public class InvertidorDeVocal extends Variables{
 
-    public String usandoFor(String texto) {
+    public String g2_usandoFor(String texto) {
         StringBuilder salida = new StringBuilder();
         for (int i = texto.length() - 1; i >= 0; i--) {
             char c = texto.charAt(i);
@@ -15,7 +15,7 @@ public class InvertirVocalMayus extends Variables{
         return salida.toString();
     }
 
-    public String usandoWhile(String texto) {
+    public String g2_usandoWhile(String texto) {
         StringBuilder salida = new StringBuilder();
         int i = texto.length() - 1;
         while (i >= 0) {
@@ -27,7 +27,7 @@ public class InvertirVocalMayus extends Variables{
         return salida.toString();
     }
 
-    public String usandoDoWhile(String texto) {
+    public String g2_usandoDoWhile(String texto) {
         if (texto.isEmpty()) return "";
         StringBuilder salida = new StringBuilder();
         int i = texto.length() - 1;

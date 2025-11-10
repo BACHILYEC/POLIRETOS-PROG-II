@@ -2,9 +2,9 @@ package CadenaCaracteres.Ejercicios;
 
 import Recursividad.Variables;
 
-public class ContarVocal extends Variables{
+public class ContadorVocal extends Variables{
 
-    public String usandoFor(String texto) {
+    public String g2_usandoFor(String texto) {
         int contador = 0;
         String vocales = "aeiouAEIOU";
         for (int i = 0; i < texto.length(); i++)
@@ -12,7 +12,7 @@ public class ContarVocal extends Variables{
         return "La frase tiene " + contador + " vocales.";
     }
 
-    public String usandoWhile(String texto) {
+    public String g2_usandoWhile(String texto) {
         int contador = 0, i = 0;
         String vocales = "aeiouAEIOU";
         while (i < texto.length()) {
@@ -22,7 +22,7 @@ public class ContarVocal extends Variables{
         return "La frase tiene " + contador + " vocales.";
     }
 
-    public String usandoDoWhile(String texto) {
+    public String g2_usandoDoWhile(String texto) {
         if (texto.isEmpty()) return "La frase tiene 0 vocales.";
         int contador = 0, i = 0;
         String vocales = "aeiouAEIOU";
