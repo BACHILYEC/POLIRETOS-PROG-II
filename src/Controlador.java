@@ -52,7 +52,19 @@ import SerieNumerica.ejercicio.SerieCuadrados;
 import SerieNumerica.ejercicio.SerieFibonacci;
 import SerieNumerica.ejercicio.SeriePrimos;
 import SerieNumerica.ejercicio.SeriePronic;
-import pkCargaSimulador.Carga;
+import pkCargaSimulador.Carga1;
+import pkCargaSimulador.Carga10;
+import pkCargaSimulador.Carga11;
+import pkCargaSimulador.Carga12;
+import pkCargaSimulador.Carga13;
+import pkCargaSimulador.Carga2;
+import pkCargaSimulador.Carga3;
+import pkCargaSimulador.Carga4;
+import pkCargaSimulador.Carga5;
+import pkCargaSimulador.Carga6;
+import pkCargaSimulador.Carga7;
+import pkCargaSimulador.Carga8;
+import pkCargaSimulador.Carga9;
 import pkCicloFiguras.Figura1;
 import pkCicloFiguras.Figura10;
 import pkCicloFiguras.Figura11;
@@ -115,8 +127,15 @@ public class Controlador extends Variables {
     }
 
     public void Ejercicio() throws InterruptedException {
+        final String ANSI_RESET = "\u001B[0m";
+        final String ANSI_RED = "\u001B[31m";
+        final String ANSI_BLUE = "\u001B[34m";
+        final String amarillo = "\u001B[33m";
+
         System.out.println("Inicio de Poliretos");
-        System.out.println("Series Numericas");
+        System.out.println(ANSI_BLUE + "===============================" + ANSI_RESET);
+        System.out.println("------- SERIES NUMERICAS -------");
+        System.out.println(ANSI_BLUE + "===============================" + ANSI_RESET);
         System.out.println("Ingrese un numero:");
         int numero1 = sc.nextInt();
         SerieFibonacci serieFibonacci = new SerieFibonacci(numero1);
@@ -178,7 +197,9 @@ public class Controlador extends Variables {
         seriePronic.g2_imprimirPronicWhile();
         seriePronic.g2_imprimirPronicDoWhile();
 
-        System.out.println("Serie de Caracteres:");
+        System.out.println(ANSI_BLUE + "========================" + ANSI_RESET);
+        System.out.println("------- SERIE CARACTERES -------");
+        System.out.println(ANSI_BLUE + "========================" + ANSI_RESET);
         Tool tool = new Tool();
         setRepeticion(tool.getConsoleNumero("Ingrese el numero de repeticiones (1-10): ", 1, 10));
 
@@ -241,8 +262,10 @@ public class Controlador extends Variables {
         ejercicio10.mostrarSucesiondeLetraFibonacciDosWhile();
         ejercicio10.mostrarSucesiondeLetraFibonacciDosDoWhile();
 
-        System.out.println("--------FIGURAS--------");
-        System.out.println("Figuras:");
+        System.out.println();
+        System.out.println(ANSI_BLUE + "========================" + ANSI_RESET);
+        System.out.println("------- FIGURAS -------");
+        System.out.println(ANSI_BLUE + "========================" + ANSI_RESET);
         System.out.println("");
         System.out.print("Ingrese el numero de niveles para las figuras: ");
         setNivel(sc.nextInt());
@@ -265,6 +288,7 @@ public class Controlador extends Variables {
         Figura17 figura017 = new Figura17(getNivel());
         Figura18 figura018 = new Figura18(getNivel());
         Figura19 figura019 = new Figura19(getNivel());
+
         figura01.g2_crearFigura1();
         figura02.g2_crearFigura2();
         figura03.g2_crearFigura3();
@@ -285,7 +309,9 @@ public class Controlador extends Variables {
         figura018.g2_crearFigura18();
         figura019.g2_crearFigura19();
 
-        System.out.println("Cadenas de Caracteres:");
+        System.out.println(ANSI_BLUE + "=====================================" + ANSI_RESET);
+        System.out.println("------- CADENAS DE CARACTERES -------");
+        System.out.println(ANSI_BLUE + "=====================================" + ANSI_RESET);
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Ingrese una frase: ");
@@ -355,7 +381,9 @@ public class Controlador extends Variables {
         System.out.println("   Con do-while: " + ana.g2_usandoDoWhile(texto));
         System.out.println();
 
-        System.out.println("Arrays:");
+        System.out.println(ANSI_BLUE + "========================" + ANSI_RESET);
+        System.out.println("------- ARRAYS -------");
+        System.out.println(ANSI_BLUE + "========================" + ANSI_RESET);
         Variablesandy datos = new Variablesandy();
         System.out.println("\nA01-Carga Nombre");
         CargaNombre programa = new CargaNombre();
@@ -378,33 +406,46 @@ public class Controlador extends Variables {
         MatrizCuadrado.matrizAleatoria_For(datos.nombreCompleto, datos.tamanio);
         MatrizCuadrado.matrizAleatoria_While(datos.nombreCompleto, datos.tamanio);
         MatrizCuadrado.matrizAleatoria_DoWhile(datos.nombreCompleto, datos.tamanio);
-        System.out.println("Loadings:");
-        System.out.println("");
-        System.out.println("--------CARGAS--------");
-        Carga carga = new Carga(100);
-        System.out.println("Carga 1: ");
-        carga.g2_cargar1();
-        System.out.println("\nCarga 2: ");
-        carga.g2_cargar2('#');
-        System.out.println("\nCarga 3: ");
-        carga.g2_cargar3('-');
-        System.out.println("\nCarga 4: ");
-        carga.g2_cargar4();
-        System.out.println("\nCarga 5: ");
-        carga.g2_cargar5();
-        System.out.println("\nCarga 6: ");
-        carga.g2_cargar6();
-        System.out.println("\nCarga 8: ");
-        carga.g2_cargar8();
-        System.out.println("\nCarga 7: ");
-        carga.g2_cargar7();
-        System.out.println("\nCarga 10: ");
-        carga.g2_cargar10();
-        System.out.println("\nCarga 11: ");
-        carga.g2_cargar11();
-        System.out.println("\nCarga 12: ");
-        carga.g2_cargar12();
-        System.out.println("Recursividad:");
+
+        System.out.println(ANSI_BLUE + "========================" + ANSI_RESET);
+        System.out.println("------- CARGAS -------");
+        System.out.println(ANSI_BLUE + "========================" + ANSI_RESET);
+        System.out.println(ANSI_RED +"Muy rapido: " + "80 [ms]" + ANSI_RESET);
+        System.out.println(amarillo + "Medio: " + "150 [ms]" + ANSI_RESET);
+        System.out.println(ANSI_BLUE+"Lento: " + "300 [ms]"+ANSI_RESET);
+        System.out.print("Ingrese el tiempo para carga en milisegundos [ms]: ");
+        setTiempo(sc.nextInt());
+        Carga1 carga1 = new Carga1(getTiempo());
+        Carga2 carga2 = new Carga2(getTiempo());
+        Carga3 carga3 = new Carga3(getTiempo());
+        Carga4 carga4 = new Carga4(getTiempo());
+        Carga5 carga5 = new Carga5(getTiempo());
+        Carga6 carga6 = new Carga6(getTiempo());
+        Carga7 carga7 = new Carga7(getTiempo());
+        Carga8 carga8 = new Carga8(getTiempo());
+        Carga9 carga9 = new Carga9(getTiempo());
+        Carga10 carga10 = new Carga10(getTiempo());
+        Carga11 carga11 = new Carga11(getTiempo());
+        Carga12 carga12 = new Carga12(getTiempo());
+        Carga13 carga13 = new Carga13(getTiempo());
+        carga1.g2_cargar1();
+        carga2.g2_cargar2();
+        carga3.g2_cargar3();
+        carga4.g2_cargar4();
+        carga5.g2_cargar5();
+        carga6.g2_cargar6();
+        carga7.g2_cargar7();
+        carga8.g2_cargar8();
+        carga9.g2_cargar9();
+        carga10.g2_cargar10();
+        carga11.g2_cargar11();
+        carga12.g2_cargar12();
+        carga13.g2_cargar13();
+
+        System.out.println();
+        System.out.println(ANSI_BLUE + "==============================" + ANSI_RESET);
+        System.out.println("------- RECURSIVIDAD -------");
+        System.out.println(ANSI_BLUE + "==============================" + ANSI_RESET);
 
         System.out.println("Ingrese el primer numero:");
         numero1 = sc.nextInt();
@@ -430,7 +471,9 @@ public class Controlador extends Variables {
         conteoReg.g2_conteoReg();
         System.out.println();
 
-        System.out.println("Grafos y Automatas:");
+        System.out.println(ANSI_BLUE + "===================================" + ANSI_RESET);
+        System.out.println("------- GRAFOS Y AUTOMATAS -------");
+        System.out.println(ANSI_BLUE + "===================================" + ANSI_RESET);
 
         System.out.println("Automata para validar: a*b+c");
         A01 automata01 = new A01();
