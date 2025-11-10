@@ -16,7 +16,6 @@ public class Carga1 extends Variables {
         System.out.println();
         int acum = 0;
         char caracter = ' ';
-        System.out.print("\r" + "[ ");
         for (int i = 1; i <= 5; i++) {
                 if(acum==0){
                     caracter = '\\';
