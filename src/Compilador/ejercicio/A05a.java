@@ -11,7 +11,7 @@ public class A05a {
 
   Scanner sc = new Scanner(System.in);
 
-  public void decimal() {
+  public void g2_decimal() {
     System.out.print("Ingrese un numero decimal: ");
     numeroDecimal = sc.nextLine();
     Boolean esnumero = true;
