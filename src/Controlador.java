@@ -454,7 +454,7 @@ public class Controlador extends Variables {
         A04 automata02 = new A04();
         automata02.ejecutarValidacion();
         A05a numerodecimal = new A05a();
-        numerodecimal.decimal();
+        numerodecimal.g2_decimal();
         A07 validador = new A07();
         validador.ejecutar(sc);
 

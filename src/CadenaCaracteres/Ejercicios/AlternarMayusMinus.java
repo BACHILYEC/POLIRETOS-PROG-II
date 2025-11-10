@@ -5,7 +5,7 @@ import Recursividad.Variables;
 
 public class AlternarMayusMinus extends Variables{
 
-    public String usandoFor(String texto) {
+    public String g2_usandoFor(String texto) {
         StringBuilder salida = new StringBuilder();
         boolean alternar = true;
         for (int i = 0; i < texto.length(); i++) {
@@ -18,7 +18,7 @@ public class AlternarMayusMinus extends Variables{
         return salida.toString();
     }
 
-    public String usandoWhile(String texto) {
+    public String g2_usandoWhile(String texto) {
         StringBuilder salida = new StringBuilder();
         boolean alternar = true;
         int i = 0;
@@ -33,7 +33,7 @@ public class AlternarMayusMinus extends Variables{
         return salida.toString();
     }
 
-    public String usandoDoWhile(String texto) {
+    public String g2_usandoDoWhile(String texto) {
         if (texto.isEmpty()) return "";
         StringBuilder salida = new StringBuilder();
         boolean alternar = true;
