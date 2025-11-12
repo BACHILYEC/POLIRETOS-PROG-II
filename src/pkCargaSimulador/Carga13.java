@@ -12,20 +12,51 @@ public class Carga13 extends Variables{
         System.out.println("Carga 13");
         System.out.println("============");
         System.out.println();
-        for(int i=1; i<=6; i++){
-            System.out.print(" ".repeat(i) );
-            System.out.print("\n"+ " ".repeat(i)+"      \\|/");
-            System.out.print("\n" + " ".repeat(i) + "     (> <)");
-            System.out.print("\n" + " ".repeat(i) + "  ooO-(_)-Ooo");
+        String caracter = "ooO-(>_<)-Ooo";
+        int acum = 0;
+        for (int i = 1; i <= 21; i++) {
+            System.out.print("\r" + "[");
+            for (int j = 1; j <= 10; j++) {
+                if(j == i){
+                        System.out.print(caracter);
+                } else {
+                        System.out.print(" ");      
+                }
+            }
+                if(acum >=45){
+                    System.out.print("\r");
+                    System.out.print("[");
+                    for(int j=20; j>=11; j--){
+                        if(j == i){
+                        System.out.print(caracter);
+                        } else {
+                            System.out.print(" ");      
+                        }
+                    }
+                }
             Thread.sleep(getTiempo());
+            acum = acum + 5;
         }
-        for(int i=6; i>=1; i--){
-            System.out.print(" ".repeat(i) );
-            System.out.print("\n"+ " ".repeat(i)+"      \\|/");
-            System.out.print("\n" + " ".repeat(i) + "     (> <)");
-            System.out.print("\n" + " ".repeat(i) + "  ooO-(_)-Ooo");
-            Thread.sleep(getTiempo());
-        }
-        System.out.println();
+    
+    
+    
+    
+    
+        //     for(int i=1; i<=6; i++){
+    //         System.out.print(" ".repeat(i) );
+    //         System.out.print("\n"+ " ".repeat(i)+"      \\|/");
+    //         System.out.print("\n" + " ".repeat(i) + "     (> <)");
+    //         System.out.print("\n" + " ".repeat(i) + "  ooO-(_)-Ooo");
+    //         Thread.sleep(getTiempo());
+    //     }
+    //     for(int i=6; i>=1; i--){
+    //         System.out.print(" ".repeat(i) );
+    //         System.out.print("\n"+ " ".repeat(i)+"      \\|/");
+    //         System.out.print("\n" + " ".repeat(i) + "     (> <)");
+    //         System.out.print("\n" + " ".repeat(i) + "  ooO-(_)-Ooo");
+    //         Thread.sleep(getTiempo());
+    //     }
+    //     System.out.println();
+    // }
     }
 }
