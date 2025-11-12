@@ -105,6 +105,23 @@ public class Controlador extends Variables {
 
     Scanner sc = new Scanner(System.in);
 
+public Integer validarnumero(){
+    String resultado = "";
+     System.out.println("Ingrese un numero:");
+     String numero = sc.nextLine();
+    for(int j = 0; j < numero.length(); j++){
+    char caracter = numero.charAt(j);
+    if(Character.isDigit(caracter))
+        resultado += caracter;
+    else{
+    System.out.println("No es numero valido");
+    validarnumero();
+    }
+    }
+    Integer numero1 = Integer.parseInt(resultado);
+ return numero1;
+}
+
     public void mostrarPortada() {
         final String ANSI_RESET = "\u001B[0m";
         final String ANSI_RED = "\u001B[31m";
@@ -136,8 +153,7 @@ public class Controlador extends Variables {
         System.out.println(ANSI_BLUE + "===============================" + ANSI_RESET);
         System.out.println("------- SERIES NUMERICAS -------");
         System.out.println(ANSI_BLUE + "===============================" + ANSI_RESET);
-        System.out.println("Ingrese un numero:");
-        int numero1 = sc.nextInt();
+        Integer numero1 = validarnumero();
         SerieFibonacci serieFibonacci = new SerieFibonacci(numero1);
         serieFibonacci.g2_imprimirFibonacci();
         serieFibonacci.g2_imprimirFibonacciWhile();
@@ -410,9 +426,9 @@ public class Controlador extends Variables {
         System.out.println(ANSI_BLUE + "========================" + ANSI_RESET);
         System.out.println("------- CARGAS -------");
         System.out.println(ANSI_BLUE + "========================" + ANSI_RESET);
-        System.out.println(ANSI_RED +"Muy rapido: " + "80 [ms]" + ANSI_RESET);
+        System.out.println(ANSI_RED + "Muy rapido: " + "80 [ms]" + ANSI_RESET);
         System.out.println(amarillo + "Medio: " + "150 [ms]" + ANSI_RESET);
-        System.out.println(ANSI_BLUE+"Lento: " + "300 [ms]"+ANSI_RESET);
+        System.out.println(ANSI_BLUE + "Lento: " + "300 [ms]" + ANSI_RESET);
         System.out.print("Ingrese el tiempo para carga en milisegundos [ms]: ");
         setTiempo(sc.nextInt());
         Carga1 carga1 = new Carga1(getTiempo());

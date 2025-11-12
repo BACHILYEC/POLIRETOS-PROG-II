@@ -37,26 +37,5 @@ public class Carga13 extends Variables{
             Thread.sleep(getTiempo());
             acum = acum + 5;
         }
-    
-    
-    
-    
-    
-        //     for(int i=1; i<=6; i++){
-    //         System.out.print(" ".repeat(i) );
-    //         System.out.print("\n"+ " ".repeat(i)+"      \\|/");
-    //         System.out.print("\n" + " ".repeat(i) + "     (> <)");
-    //         System.out.print("\n" + " ".repeat(i) + "  ooO-(_)-Ooo");
-    //         Thread.sleep(getTiempo());
-    //     }
-    //     for(int i=6; i>=1; i--){
-    //         System.out.print(" ".repeat(i) );
-    //         System.out.print("\n"+ " ".repeat(i)+"      \\|/");
-    //         System.out.print("\n" + " ".repeat(i) + "     (> <)");
-    //         System.out.print("\n" + " ".repeat(i) + "  ooO-(_)-Ooo");
-    //         Thread.sleep(getTiempo());
-    //     }
-    //     System.out.println();
-    // }
     }
 }
