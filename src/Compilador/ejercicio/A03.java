@@ -4,15 +4,14 @@ import SerieCaracteres.ciclos.Tool;
 
 public class A03 {
     static final int IH_ER  = -1;
-    static final int IH_OK  = 1;
-    static final int IH_INC = 0;
 
     enum IhState {
         Q0, Q1, Q2, Q3, Q4, Q5, QE
     }
 
     static final int[][] ihMt = {
-        // a    /     b     c    EOL
+        // 0    1    2   3   4
+        // a    /   b    c   EOL
         { 1,   6,   6,   6,  6 },  // Q0
         { 1,   2,   6,   6,  6 },  // Q1
         { 6,   6,   3,   6,  6 },  // Q2
@@ -22,7 +21,7 @@ public class A03 {
         { 6,   6,   6,   6,  6 },  // QE
     };
 
-    private int ihBuscarColumna(char c) {
+    private int ihBuscarColumna(char c) { // me devuelve la columna
         if (c == '\0') return 4;
         switch (c) {
             case 'a': return 0;
@@ -34,13 +33,13 @@ public class A03 {
     }
 
     public boolean validarCadena(String cadena) {
-        IhState ihEstado = IhState.Q0;
+        IhState ihEstado = IhState.Q0; //empiezo en Q0 // asigno a ihEstado el valor Q0 del enum IhState
         int ihCol;
         for (int j = 0; j < cadena.length(); j++) {
-            ihCol = ihBuscarColumna(cadena.charAt(j));
+            ihCol = ihBuscarColumna(cadena.charAt(j)); // por cada caracter llamo a buscarColumna charAt(j) [posicion j de la cadena (caracter)]
             if (ihCol == IH_ER) return false;
-            ihEstado = IhState.values()[ihMt[ihEstado.ordinal()][ihCol]];
-            if (ihEstado == IhState.QE) return false;
+            ihEstado = IhState.values()[ihMt[ihEstado.ordinal()][ihCol]]; // ordinal me da la posicion del enum si ihEstado es Q0, su ordinal es 0; si es Q1, es 1, etc.
+            if (ihEstado == IhState.QE) return false;                     // el indice (0,0) por ejemplo, me lleva al numero '1', con state values le digo que me devuelva el estado que corresponde a ese numero
         }
         ihCol = 4; // EOL
         ihEstado = IhState.values()[ihMt[ihEstado.ordinal()][ihCol]];
